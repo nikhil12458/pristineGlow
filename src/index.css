@@ -1,0 +1,22 @@
+:root {
+  /* color palette */
+  --primary-color: #2f4f3e; /* Forest Green --> Headers */  
+  --secondary-color: #8faf9a; /* Sage Green --> Cards */
+  --accent-color: #c9a24d; /* Soft Gold --> Buttons & highlights */
+  --background-color: #f4f1ec; /* Warm Linen --> Background */
+
+  /* text color */
+  --text-color: #3b2f2f; /* Deep Brown --> text */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
