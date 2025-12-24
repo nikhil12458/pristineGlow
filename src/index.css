@@ -138,4 +138,16 @@ html,
 body {
   height: 100%;
   width: 100%;
+}
+
+.main nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.main nav.navbar .nav-items {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: normal;
 }/*# sourceMappingURL=index.css.map */

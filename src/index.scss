@@ -163,3 +163,21 @@ body {
   height: 100%;
   width: 100%;
 }
+
+@mixin flex($justify, $direction){
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.main{
+  nav.navbar{
+    @include flex(space-between, row);
+    .nav-items{
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style: normal;
+}
+  }
+}

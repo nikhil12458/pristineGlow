@@ -1,11 +1,13 @@
 import React, { useContext } from 'react'
 import Contact from './ContactPage/Contact'
+import Nav from './components/navbar/Nav'
 
 const App = () => {
   
   return (
-    <div>
-      <Contact />
+    <div className='main'>
+      <Nav />
+      {/* <Contact /> */}
     </div>
   )
 }
