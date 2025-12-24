@@ -164,20 +164,23 @@ body {
   width: 100%;
 }
 
-@mixin flex($justify, $direction){
+@mixin flex($justify, $direction) {
   display: flex;
   justify-content: $justify;
   align-items: center;
   flex-direction: $direction;
 }
 
-.main{
-  nav.navbar{
+.main {
+  nav.navbar {
+    width: 80%;
+    margin: 0 auto;
     @include flex(space-between, row);
-    .nav-items{
-  font-family: Montserrat;
-  font-weight: 600;
-  font-style: normal;
-}
+    border: 2px solid red;
+    .nav-items {
+      font-family: Montserrat;
+      font-weight: 600;
+      font-style: normal;
+    }
   }
 }

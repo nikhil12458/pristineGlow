@@ -10,6 +10,7 @@ const Nav = () => {
       {navElem.map((item, idx) => {
         return <Link className='nav-items' key={idx} to={`/${item.toLowerCase()}`}>{item}</Link>
       })}
+      
     </nav>
   )
 }
