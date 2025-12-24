@@ -4,118 +4,141 @@
   font-weight: 100;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-ThinItalic.woff2") format("woff2");
   font-weight: 100;
   font-style: italic;
 }
+
 /* for contact */
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-ExtraLightItalic.woff2") format("woff2");
   font-weight: 200;
   font-style: italic;
 }
+
 /* for contact-email */
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-LightItalic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
+
 /* for home */
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-MediumItalic.woff2") format("woff2");
   font-weight: 500;
   font-style: italic;
 }
+
 /* for nav, home, form-names */
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-SemiBoldItalic.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-BoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2");
   font-weight: 800;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-BlackItalic.woff2") format("woff2");
   font-weight: 900;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Allerta";
   src: url("./fonts/Allerta-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
+
 :root {
   /* color palette */
   --primary-color: #2f4f3e; /* Forest Green --> Headers */
@@ -123,6 +146,7 @@
   --accent-color: #c9a24d; /* Soft Gold --> Buttons & highlights */
   --background-color: #f4f1ec; /* Warm Linen --> Background */
   --background-color-light-linen: #f4f1ec; /* for home contact and standard pages */
+
   /* text color */
   --text-color: #3b2f2f; /* Deep Brown --> text */
   --contact-form-button-color: #847045; /* darker gold --> for form text and buttons */
@@ -138,4 +162,4 @@ html,
 body {
   height: 100%;
   width: 100%;
-}/*# sourceMappingURL=index.css.map */
+}
