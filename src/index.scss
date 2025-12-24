@@ -146,6 +146,7 @@
   --accent-color: #c9a24d; /* Soft Gold --> Buttons & highlights */
   --background-color: #f4f1ec; /* Warm Linen --> Background */
   --background-color-light-linen: #f4f1ec; /* for home contact and standard pages */
+  --nav-background-color: #ccc6bb66; /* Light Beige --> navbar background */
 
   /* text color */
   --text-color: #3b2f2f; /* Deep Brown --> text */
@@ -212,15 +213,36 @@ body {
 }
 
 .main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  
   nav.navbar {
     width: 80%;
     margin: 0 auto;
     @include flex(space-between, row);
-    border: 2px solid red;
+    padding: var(--pad-sm) var(--pad-md);
+    border-radius: var(--pad-lg);
+    background-color: var(--nav-background-color);
+    position: relative;
+
+    /* Glass base */
+    backdrop-filter: blur(14px) saturate(170%);
+    -webkit-backdrop-filter: blur(14px) saturate(170%);
+
+    /* Glass edge */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    /* Depth */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
     .nav-items {
       font-family: Montserrat;
       font-weight: 600;
       font-style: normal;
+      color: var(--text-color);
+      text-decoration: none;
     }
   }
 }
