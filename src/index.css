@@ -126,6 +126,42 @@
   /* text color */
   --text-color: #3b2f2f; /* Deep Brown --> text */
   --contact-form-button-color: #847045; /* darker gold --> for form text and buttons */
+  /* ===== Padding ===== */
+  --pad-xs: 0.5rem; /* 8px  */
+  --pad-sm: 1rem; /* 16px */
+  --pad-md: 1.5rem; /* 24px */
+  --pad-lg: 2rem; /* 32px */
+  --pad-xl: 3rem; /* 48px */
+  --pad-2xl: 4rem; /* 64px */
+  --pad-3xl: 5rem; /* 80px */
+  --pad-4xl: 6rem; /* 96px */
+  --pad-5xl: 7rem; /* 112px */
+  --pad-6xl: 8rem; /* 128px */
+  --pad-7xl: 9rem; /* 144px */
+  --pad-8xl: 10rem; /* 160px */
+  /* ===== Margin ===== */
+  --mar-xs: 0.5rem;
+  --mar-sm: 1rem;
+  --mar-md: 1.5rem;
+  --mar-lg: 2rem;
+  --mar-xl: 3rem;
+  --mar-2xl: 4rem;
+  --mar-3xl: 5rem;
+  --mar-4xl: 6rem;
+  --mar-5xl: 7rem;
+  --mar-6xl: 8rem;
+  --mar-7xl: 9rem;
+  --mar-8xl: 10rem;
+  /* ===== Gutter ===== */
+  --gutter-sm: 1rem; /* mobile */
+  --gutter-md: 2rem; /* tablet */
+  --gutter-lg: 3rem; /* desktop */
+  /* ===== Border Radius ===== */
+  --radius-sm: 0.25rem; /* 4px  */
+  --radius-md: 0.5rem; /* 8px  */
+  --radius-lg: 0.75rem; /* 12px */
+  --radius-xl: 1rem; /* 16px */
+  --radius-full: 9999px; /* pill / circle */
 }
 
 * {
