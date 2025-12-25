@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
-import Contact from './ContactPage/Contact'
+import Contact from './components/ContactPage/Contact'
+
 
 const App = () => {
   
