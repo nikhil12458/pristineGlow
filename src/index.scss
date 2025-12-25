@@ -215,7 +215,7 @@ body {
 .main {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--background-color);
+  background-color: var(--background-color-light-linen);
   padding-top: 0.1px;
 
   nav.navbar {
@@ -288,7 +288,7 @@ body {
   padding: var(--pad-lg);
   text-decoration: underline;
   font-family: Montserrat;
-  font-weight: 300;
+  font-weight: 100;
   font-style: normal;
   color: var(--accent-color);
 }
@@ -334,6 +334,9 @@ body {
     border-color: #c9a24d;
     padding-left: 0.5rem;
   }
+  input{
+    position: relative;
+  }
   .input-message{
     height: 12rem;
     width: 100%;
@@ -341,5 +344,15 @@ body {
     border: 1px solid;
     border-color: #c9a24d;
     padding-left: 0.5rem;
+  }
+  textarea{
+    resize: none;
+    width: 100%;
+    height: 12rem;
+    padding-left: 0.5rem;
+    outline: none;
+    border: 1px solid;
+    border-color: #c9a24d;
+    font-family: Montserrat;
   }
 }

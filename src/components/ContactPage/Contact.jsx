@@ -28,11 +28,7 @@ const Contact = () => {
           </div>
           <div>
             <h2>Message</h2>
-            <input className="input-message"
-              type="text"
-              placeholder="Enter your message"
-              message="message"
-            />
+            <textarea name="textarea" placeholder="Enter youe message" ></textarea>
           </div>
         </div>
       </section>
