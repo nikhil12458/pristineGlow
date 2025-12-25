@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import Contact from './ContactPage/Contact'
 import Nav from './components/navbar/Nav'
+import BottomBar from './components/bottomBar/BottomBar'
 
 const App = () => {
   
@@ -8,6 +9,7 @@ const App = () => {
     <div className='main'>
       <Nav />
       {/* <Contact /> */}
+      <BottomBar />
     </div>
   )
 }

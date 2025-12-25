@@ -216,6 +216,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: var(--background-color);
+  padding-top: .1px;
 
   nav.navbar {
     width: 80%;
@@ -226,6 +227,7 @@ body {
     background-color: var(--nav-background-color);
     position: relative;
     overflow: hidden;
+    margin-top: var(--mar-md);
 
     /* Glass base */
     backdrop-filter: blur(14px) saturate(170%);
@@ -278,6 +280,6 @@ body {
       top: -109%;
       right: -3%;
       rotate: 14deg;
-    }
+    } 
   }
 }

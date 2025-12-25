@@ -181,6 +181,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: var(--background-color);
+  padding-top: 0.1px;
 }
 .main nav.navbar {
   width: 80%;
@@ -194,6 +195,7 @@ body {
   background-color: var(--nav-background-color);
   position: relative;
   overflow: hidden;
+  margin-top: var(--mar-md);
   /* Glass base */
   backdrop-filter: blur(14px) saturate(170%);
   -webkit-backdrop-filter: blur(14px) saturate(170%);
