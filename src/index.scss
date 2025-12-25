@@ -4,118 +4,141 @@
   font-weight: 100;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-ThinItalic.woff2") format("woff2");
   font-weight: 100;
   font-style: italic;
 }
+
 /* for contact */
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-ExtraLightItalic.woff2") format("woff2");
   font-weight: 200;
   font-style: italic;
 }
+
 /* for contact-email */
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-LightItalic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
+
 /* for home */
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-MediumItalic.woff2") format("woff2");
   font-weight: 500;
   font-style: italic;
 }
+
 /* for nav, home, form-names */
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-SemiBoldItalic.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-BoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2");
   font-weight: 800;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-BlackItalic.woff2") format("woff2");
   font-weight: 900;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Allerta";
   src: url("/fonts/Allerta-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
+
 :root {
   /* color palette */
   --primary-color: #2f4f3e; /* Forest Green --> Headers */
@@ -124,9 +147,11 @@
   --background-color: #f4f1ec; /* Warm Linen --> Background */
   --background-color-light-linen: #f4f1ec; /* for home contact and standard pages */
   --nav-background-color: #ccc6bb66; /* Light Beige --> navbar background */
+
   /* text color */
   --text-color: #3b2f2f; /* Deep Brown --> text */
   --contact-form-button-color: #847045; /* darker gold --> for form text and buttons */
+
   /* ===== Padding ===== */
   --pad-xs: 0.5rem; /* 8px  */
   --pad-sm: 1rem; /* 16px */
@@ -140,6 +165,7 @@
   --pad-6xl: 8rem; /* 128px */
   --pad-7xl: 9rem; /* 144px */
   --pad-8xl: 10rem; /* 160px */
+
   /* ===== Margin ===== */
   --mar-xs: 0.5rem;
   --mar-sm: 1rem;
@@ -153,10 +179,12 @@
   --mar-6xl: 8rem;
   --mar-7xl: 9rem;
   --mar-8xl: 10rem;
+
   /* ===== Gutter ===== */
   --gutter-sm: 1rem; /* mobile */
   --gutter-md: 2rem; /* tablet */
   --gutter-lg: 3rem; /* desktop */
+
   /* ===== Border Radius ===== */
   --radius-sm: 0.25rem; /* 4px  */
   --radius-md: 0.5rem; /* 8px  */
@@ -177,72 +205,84 @@ body {
   width: 100%;
 }
 
+@mixin flex($justify, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
+
 .main {
   width: 100%;
   min-height: 100vh;
   background-color: var(--background-color);
   padding-top: 0.1px;
-}
-.main nav.navbar {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  padding: var(--pad-sm) var(--pad-md);
-  border-radius: var(--pad-lg);
-  background-color: var(--nav-background-color);
-  position: relative;
-  overflow: hidden;
-  margin-top: var(--mar-md);
-  /* Glass base */
-  backdrop-filter: blur(14px) saturate(170%);
-  -webkit-backdrop-filter: blur(14px) saturate(170%);
-  /* Glass edge */
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  /* Depth */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-.main nav.navbar img {
-  width: 10vw;
-  position: absolute;
-  left: -3%;
-  bottom: -123%;
-  pointer-events: none;
-  display: none;
-}
-.main nav.navbar .nav-items {
-  font-family: Montserrat;
-  font-weight: 600;
-  font-style: normal;
-  color: var(--text-color);
-  text-decoration: none;
-}
-.main nav.navbar .nav-items:nth-child(2)::after {
-  content: "";
-  position: absolute;
-  width: 6rem;
-  height: 6rem;
-  background: url("/prop/prop1.png") no-repeat;
-  background-size: cover;
-  background-position: center;
-  top: -22%;
-  left: -1%;
-}
-.main nav.navbar .nav-items:nth-last-child(1)::after {
-  content: "";
-  position: absolute;
-  width: 6rem;
-  height: 6rem;
-  background: url("/prop/prop2.png") no-repeat;
-  background-size: cover;
-  background-position: center;
-  top: -109%;
-  right: -3%;
-  rotate: 14deg;
-}
 
+  nav.navbar {
+    width: 80%;
+    margin: 0 auto;
+    @include flex(space-between, row);
+    padding: var(--pad-sm) var(--pad-md);
+    border-radius: var(--pad-lg);
+    background-color: var(--nav-background-color);
+    position: relative;
+    overflow: hidden;
+    margin-top: var(--mar-md);
+
+    /* Glass base */
+    backdrop-filter: blur(14px) saturate(170%);
+    -webkit-backdrop-filter: blur(14px) saturate(170%);
+
+    /* Glass edge */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    /* Depth */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+    img {
+      width: 10vw;
+      position: absolute;
+      left: -3%;
+      bottom: -123%;
+      pointer-events: none;
+      display: none;
+    }
+
+    .nav-items {
+      font-family: Montserrat;
+      font-weight: 600;
+      font-style: normal;
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    .nav-items:nth-child(2)::after {
+      content: "";
+      position: absolute;
+      width: 6rem;
+      height: 6rem;
+      background: url("/prop/prop1.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      top: -22%;
+      left: -1%;
+    }
+
+    .nav-items:nth-last-child(1)::after {
+      content: "";
+      position: absolute;
+      width: 6rem;
+      height: 6rem;
+      background: url("/prop/prop2.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      top: -109%;
+      right: -3%;
+      rotate: 14deg;
+    }
+  }
+}
 .heading {
   text-align: center;
   padding: var(--pad-lg);
@@ -252,54 +292,54 @@ body {
   font-style: normal;
   color: var(--accent-color);
 }
-
 .firstdiv {
   display: flex;
   justify-content: space-between;
   padding: 0 9rem;
-}
-.firstdiv h2 {
-  color: var(--accent-color);
-  font-family: Montserrat;
-  font-weight: 600;
-  font-style: normal;
-}
-.firstdiv input {
-  height: 2.5rem;
-  width: 20rem;
-  outline: none;
-  border: 1px solid;
-  border-color: #c9a24d;
-  padding-left: 0.5rem;
-}
 
+  h2 {
+    color: var(--accent-color);
+    font-family: Montserrat;
+    font-weight: 600;
+    font-style: normal;
+  }
+  input {
+    height: 2.5rem;
+    width: 20rem;
+    outline: none;
+    border: 1px solid;
+    border-color: #c9a24d;
+    padding-left: 0.5rem;
+  }
+}
 .seconddiv {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 9rem;
   margin-top: 0.5rem;
+
+  h2 {
+    color: var(--accent-color);
+    font-family: Montserrat;
+    font-weight: 600;
+    font-style: normal;
+    margin-top: 0.5rem;
+  }
+    .input-phone {
+    height: 2.5rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid;
+    border-color: #c9a24d;
+    padding-left: 0.5rem;
+  }
+  .input-message{
+    height: 12rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid;
+    border-color: #c9a24d;
+    padding-left: 0.5rem;
+  }
 }
-.seconddiv h2 {
-  color: var(--accent-color);
-  font-family: Montserrat;
-  font-weight: 600;
-  font-style: normal;
-  margin-top: 0.5rem;
-}
-.seconddiv .input-phone {
-  height: 2.5rem;
-  width: 100%;
-  outline: none;
-  border: 1px solid;
-  border-color: #c9a24d;
-  padding-left: 0.5rem;
-}
-.seconddiv .input-message {
-  height: 12rem;
-  width: 100%;
-  outline: none;
-  border: 1px solid;
-  border-color: #c9a24d;
-  padding-left: 0.5rem;
-}/*# sourceMappingURL=index.css.map */

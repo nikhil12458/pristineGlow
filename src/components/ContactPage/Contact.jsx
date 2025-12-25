@@ -19,8 +19,8 @@ const Contact = () => {
         </div>
         <div className="seconddiv">
           <div>
-            <h2>Pone Number</h2>
-            <input
+            <h2>Phone Number</h2>
+            <input className="input-phone"
               type="number"
               placeholder="Enter your phone number"
               phoneNumber="phoneNumer"
@@ -28,7 +28,7 @@ const Contact = () => {
           </div>
           <div>
             <h2>Message</h2>
-            <input
+            <input className="input-message"
               type="text"
               placeholder="Enter your message"
               message="message"
