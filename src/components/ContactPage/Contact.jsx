@@ -2,37 +2,39 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div>
-      <section className="main-contact">
-        <div className="heading">
-          <h1>CONTACT</h1>
-        </div>
-        <div className="firstdiv">
-          <div>
-            <h2>Name</h2>
+    <>
+      <h1 className="contact-heading">CONTACT</h1>
+      <form className="main-contact">
+        <label className="contact-first">
+          <div className="child-name">
+            <span>Name</span>
             <input type="text" placeholder="Enter your name" name="name" />
           </div>
-          <div>
-            <h2>Email</h2>
+          <div className="child-email">
+            <span>Email</span>
             <input type="text" placeholder="Enter your email" email="email" />
           </div>
-        </div>
-        <div className="seconddiv">
-          <div>
-            <h2>Phone Number</h2>
-            <input className="input-phone"
-              type="number"
+        </label>
+        <label className="contact-second">
+          <div className="child-phonenumber">
+            <span>Phone Number</span>
+            <input
+              type="text"
               placeholder="Enter your phone number"
-              phoneNumber="phoneNumer"
+              phoneNumber="phoneNumber"
             />
           </div>
-          <div>
-            <h2>Message</h2>
-            <textarea name="textarea" placeholder="Enter youe message" ></textarea>
+          <div className="child-message">
+            <span>Message</span>
+            <textarea
+              name="message"
+              placeholder="Enter your message"
+              message="message"
+            ></textarea>
           </div>
-        </div>
-      </section>
-    </div>
+        </label>
+      </form>
+    </>
   );
 };
 

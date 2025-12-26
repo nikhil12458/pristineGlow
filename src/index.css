@@ -243,76 +243,100 @@ body {
   rotate: 14deg;
 }
 
-.heading {
+.contact-heading {
   text-align: center;
-  padding: var(--pad-lg);
+  padding-top: var(--pad-2xl);
+  font-family: Montserrat;
+  font-weight: 300;
+  font-style: normal;
   text-decoration: underline;
-  font-family: Montserrat;
-  font-weight: 100;
-  font-style: normal;
   color: var(--accent-color);
 }
 
-.firstdiv {
+.main-contact {
+  padding: 0 10rem;
+}
+.main-contact .contact-first {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 0 9rem;
 }
-.firstdiv h2 {
-  color: var(--accent-color);
-  font-family: Montserrat;
-  font-weight: 600;
-  font-style: normal;
-}
-.firstdiv input {
-  height: 2.5rem;
-  width: 20rem;
-  outline: none;
-  border: 1px solid;
-  border-color: #c9a24d;
-  padding-left: 0.5rem;
-}
-
-.seconddiv {
+.main-contact .contact-first .child-name {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 0 9rem;
-  margin-top: 0.5rem;
-}
-.seconddiv h2 {
-  color: var(--accent-color);
+  font-size: x-large;
   font-family: Montserrat;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
-  margin-top: 0.5rem;
+  color: var(--accent-color);
 }
-.seconddiv .input-phone {
+.main-contact .contact-first .child-name input {
   height: 2.5rem;
-  width: 100%;
+  width: 18rem;
   outline: none;
   border: 1px solid;
-  border-color: #c9a24d;
+  border-color: var(--accent-color);
   padding-left: 0.5rem;
 }
-.seconddiv input {
-  position: relative;
+.main-contact .contact-first .child-email {
+  display: flex;
+  flex-direction: column;
+  font-size: x-large;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--accent-color);
 }
-.seconddiv .input-message {
-  height: 12rem;
-  width: 100%;
+.main-contact .contact-first .child-email input {
+  height: 2.5rem;
+  width: 18rem;
   outline: none;
   border: 1px solid;
-  border-color: #c9a24d;
+  border-color: var(--accent-color);
   padding-left: 0.5rem;
 }
-.seconddiv textarea {
+.main-contact .contact-second {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.main-contact .contact-second .child-phonenumber {
+  display: flex;
+  flex-direction: column;
+  font-size: x-large;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--accent-color);
+}
+.main-contact .contact-second .child-phonenumber input {
+  height: 2.5rem;
+  outline: none;
+  border: 1px solid;
+  border-color: var(--accent-color);
+  padding-left: 0.5rem;
+}
+.main-contact .contact-second .child-message {
+  display: flex;
+  flex-direction: column;
+  font-size: x-large;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--accent-color);
+  margin-top: 1rem;
+}
+.main-contact .contact-second .child-message textarea {
+  height: 15rem;
   resize: none;
-  width: 100%;
-  height: 12rem;
-  padding-left: 0.5rem;
+  padding: 0.5rem 0.5rem;
   outline: none;
   border: 1px solid;
-  border-color: #c9a24d;
+  border-color: var(--accent-color);
+}
+.main-contact .contact-second .child-message textarea textarea::-moz-placeholder {
+  font-family: Montserrat;
+}
+.main-contact .contact-second .child-message textarea textarea::placeholder {
   font-family: Montserrat;
 }/*# sourceMappingURL=index.css.map */
