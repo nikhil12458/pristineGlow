@@ -337,12 +337,12 @@ body {
       }
     }
   }
-  .contact-second{
+  .contact-second {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
 
-    .child-phonenumber{
+    .child-phonenumber {
       display: flex;
       flex-direction: column;
       font-size: x-large;
@@ -351,7 +351,7 @@ body {
       font-style: normal;
       color: var(--accent-color);
 
-      input{
+      input {
         height: 2.5rem;
         outline: none;
         border: 1px solid;
@@ -359,7 +359,7 @@ body {
         padding-left: 0.5rem;
       }
     }
-    .child-message{
+    .child-message {
       display: flex;
       flex-direction: column;
       font-size: x-large;
@@ -369,7 +369,7 @@ body {
       color: var(--accent-color);
       margin-top: 1rem;
 
-      textarea{
+      textarea {
         height: 15rem;
         resize: none;
         padding: 0.5rem 0.5rem;
@@ -377,7 +377,7 @@ body {
         border: 1px solid;
         border-color: var(--accent-color);
 
-        textarea::placeholder{
+        textarea::placeholder {
           font-family: Montserrat;
         }
       }
