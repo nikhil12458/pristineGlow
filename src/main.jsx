@@ -4,13 +4,16 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { CandleProvider } from "./context/CandleProvider.jsx";
+import { HelmetProvider } from "react-helmet-async";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
-      <CandleProvider>
-        <App />
-      </CandleProvider>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <CandleProvider>
+          <App />
+        </CandleProvider>
+      </BrowserRouter>
+    </HelmetProvider>
   </StrictMode>
 );

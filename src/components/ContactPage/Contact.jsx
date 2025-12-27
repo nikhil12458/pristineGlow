@@ -1,8 +1,18 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   return (
     <>
+
+    <Helmet>
+        <title>Contact Us | Pristine Glow</title>
+        <meta
+          name="description"
+          content="Get in touch with Pristine Glow for inquiries, support, or feedback."
+        />
+      </Helmet>
+    
       <h1 className="contact-heading">CONTACT</h1>
       <form class="main-contact">
         <div class="contact-first">
