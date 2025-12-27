@@ -7,9 +7,8 @@ const Nav = () => {
   
   return (
     <nav className='navbar'>
-      <img src="./prop/prop1.png" alt="" />
       {navElem.map((item, idx) => {
-        return <Link className='nav-items' key={idx} to={`/${item.toLowerCase()}`}>{item}</Link>
+        return <Link className='nav-items' key={idx} to={item === "Home" ? "/" : `/${item.toLowerCase()}`}>{item}</Link>
       })}
       
     </nav>
