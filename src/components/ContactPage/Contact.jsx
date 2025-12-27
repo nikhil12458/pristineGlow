@@ -4,35 +4,61 @@ const Contact = () => {
   return (
     <>
       <h1 className="contact-heading">CONTACT</h1>
-      <form className="main-contact">
-        <label className="contact-first">
-          <div className="child-name">
-            <span>Name</span>
-            <input type="text" placeholder="Enter your name" name="name" />
-          </div>
-          <div className="child-email">
-            <span>Email</span>
-            <input type="text" placeholder="Enter your email" email="email" />
-          </div>
-        </label>
-        <label className="contact-second">
-          <div className="child-phonenumber">
-            <span>Phone Number</span>
+      <form class="main-contact">
+        <div class="contact-first">
+          <div class="child-name">
+            <label for="name">
+              <span>Name</span>
+            </label>
             <input
               type="text"
-              placeholder="Enter your phone number"
-              phoneNumber="phoneNumber"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
             />
           </div>
-          <div className="child-message">
-            <span>Message</span>
+
+          <div class="child-email">
+            <label for="email">
+              <span>Email</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="contact-second">
+          <div class="child-phonenumber">
+            <label for="phoneNumber">
+              <span>Phone Number</span>
+            </label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+
+          <div class="child-message">
+            <label for="message">
+              <span>Message</span>
+            </label>
             <textarea
+              id="message"
               name="message"
               placeholder="Enter your message"
-              message="message"
+              required
             ></textarea>
           </div>
-        </label>
+        </div>
       </form>
     </>
   );
