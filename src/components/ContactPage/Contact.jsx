@@ -14,12 +14,10 @@ const Contact = () => {
       </Helmet>
     
       <h1 className="contact-heading">CONTACT</h1>
-      <form class="main-contact">
-        <div class="contact-first">
-          <div class="child-name">
-            <label for="name">
-              <span>Name</span>
-            </label>
+      <form className="main-contact">
+        <div className="contact-first">
+          <label className="child-name" htmlFor="name">
+            <span>Name</span>
             <input
               type="text"
               id="name"
@@ -27,12 +25,10 @@ const Contact = () => {
               placeholder="Enter your name"
               required
             />
-          </div>
+          </label>
 
-          <div class="child-email">
-            <label for="email">
-              <span>Email</span>
-            </label>
+          <label className="child-email" htmlFor="email">
+            <span>Email</span>
             <input
               type="email"
               id="email"
@@ -40,14 +36,12 @@ const Contact = () => {
               placeholder="Enter your email"
               required
             />
-          </div>
+          </label>
         </div>
 
-        <div class="contact-second">
-          <div class="child-phonenumber">
-            <label for="phoneNumber">
-              <span>Phone Number</span>
-            </label>
+        <div className="contact-second">
+          <label className="child-phonenumber" htmlFor="phoneNumber">
+            <span>Phone Number</span>
             <input
               type="tel"
               id="phoneNumber"
@@ -55,19 +49,17 @@ const Contact = () => {
               placeholder="Enter your phone number"
               required
             />
-          </div>
+          </label>
 
-          <div class="child-message">
-            <label for="message">
-              <span>Message</span>
-            </label>
+          <label className="child-message" htmlFor="message">
+            <span>Message</span>
             <textarea
               id="message"
               name="message"
               placeholder="Enter your message"
               required
-            ></textarea>
-          </div>
+            />
+          </label>
         </div>
       </form>
     </>
