@@ -6,9 +6,13 @@ import BottomBar from './components/bottomBar/BottomBar'
 const App = () => {
   return (
     <div className="main">
-      <Nav />
-       <Contact />
-      <BottomBar />
+     <Nav />
+      {/* <Contact /> */}
+      {/* <BottomBar /> */}
+
+      <Routes>
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 };
