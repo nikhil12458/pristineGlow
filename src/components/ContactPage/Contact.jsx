@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import Button from "../button/Button";
 
 const Contact = () => {
   return (
@@ -55,7 +56,7 @@ const Contact = () => {
                 required
               ></textarea>
             </label>
-            <button>Request callback</button>
+            <Button text={"Request Callback"} />
           </form>
         </section>
       </div>

@@ -4,13 +4,12 @@ import Nav from "./components/navbar/Nav";
 import BottomBar from "./components/bottomBar/BottomBar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/home/Home";
+import Button from "./components/button/Button";
 
 const App = () => {
   return (
     <div className="main">
       <Nav />
-      {/* <Contact /> */}
-      {/* <BottomBar /> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
