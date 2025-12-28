@@ -318,6 +318,8 @@ body {
   font-weight: 600;
   width: 25vw;
   padding: var(--pad-sm);
+  outline: none;
+  border: 2px solid var(--accent-color);
 }
 .main .contact-page section.contact-body form label.form-center {
   display: flex;
@@ -334,6 +336,8 @@ body {
   font-weight: 600;
   width: 100%;
   padding: var(--pad-sm);
+  outline: none;
+  border: 2px solid var(--accent-color);
 }
 .main .contact-page section.contact-body form label.form-bottom {
   display: flex;
@@ -352,6 +356,8 @@ body {
   height: 15rem;
   padding: var(--pad-sm);
   resize: none;
+  outline: none;
+  border: 2px solid var(--accent-color);
 }
 .main .contact-page section.contact-body form button {
   margin: 0 auto;

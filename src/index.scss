@@ -362,6 +362,8 @@ body {
               font-weight: 600;
               width: 25vw;
               padding: var(--pad-sm);
+              outline: none;
+              border: 2px solid var(--accent-color);
             }
           }
         }
@@ -378,6 +380,8 @@ body {
             font-weight: 600;
             width: 100%;
             padding: var(--pad-sm);
+            outline: none;
+            border: 2px solid var(--accent-color);
           }
         }
 
@@ -394,6 +398,8 @@ body {
             height: 15rem;
             padding: var(--pad-sm);
             resize: none;
+            outline: none;
+            border: 2px solid var(--accent-color);
           }
         }
         button {
