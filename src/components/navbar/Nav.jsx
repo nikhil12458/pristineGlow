@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = () => {
 
-  const navElem = ["Home", "Featured", "Contact", "Custom-Order", "Help"];
+  const navElem = ["Home", "Featured", "Contact", "Custom-Order", "Glow"];
   
   return (
     <nav className='navbar'>

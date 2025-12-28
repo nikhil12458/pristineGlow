@@ -26,8 +26,8 @@ const candleData = [
     images: [
       "/images/ocean-1.jpg",
       "/images/ocean-2.jpg",
-      "/images/ocean-3.jpg"
-    ]
+      "/images/ocean-3.jpg",
+    ],
   },
   {
     id: 2,
@@ -49,11 +49,7 @@ const candleData = [
     safetyInfo: "Trim wick to ¼ inch before lighting.",
     occasion: ["Anniversary", "Gift"],
 
-    images: [
-      "/images/rose-1.jpg",
-      "/images/rose-2.jpg",
-      "/images/rose-3.jpg"
-    ]
+    images: ["/images/rose-1.jpg", "/images/rose-2.jpg", "/images/rose-3.jpg"],
   },
   {
     id: 3,
@@ -75,10 +71,7 @@ const candleData = [
     safetyInfo: "Do not burn for more than 4 hours at a time.",
     occasion: ["Meditation", "Relaxation"],
 
-    images: [
-      "/images/lavender-1.jpg",
-      "/images/lavender-2.jpg"
-    ]
+    images: ["/images/lavender-1.jpg", "/images/lavender-2.jpg"],
   },
   {
     id: 4,
@@ -100,10 +93,7 @@ const candleData = [
     safetyInfo: "Place on heat-resistant surface.",
     occasion: ["Home", "Gift"],
 
-    images: [
-      "/images/vanilla-1.jpg",
-      "/images/vanilla-2.jpg"
-    ]
+    images: ["/images/vanilla-1.jpg", "/images/vanilla-2.jpg"],
   },
   {
     id: 5,
@@ -125,10 +115,7 @@ const candleData = [
     safetyInfo: "Keep away from flammable materials.",
     occasion: ["Meditation", "Spiritual"],
 
-    images: [
-      "/images/sandalwood-1.jpg",
-      "/images/sandalwood-2.jpg"
-    ]
+    images: ["/images/sandalwood-1.jpg", "/images/sandalwood-2.jpg"],
   },
   {
     id: 6,
@@ -150,10 +137,7 @@ const candleData = [
     safetyInfo: "Do not leave unattended.",
     occasion: ["Morning", "Work"],
 
-    images: [
-      "/images/citrus-1.jpg",
-      "/images/citrus-2.jpg"
-    ]
+    images: ["/images/citrus-1.jpg", "/images/citrus-2.jpg"],
   },
   {
     id: 7,
@@ -175,10 +159,7 @@ const candleData = [
     safetyInfo: "Burn on stable surface.",
     occasion: ["Relaxation", "Evening"],
 
-    images: [
-      "/images/jasmine-1.jpg",
-      "/images/jasmine-2.jpg"
-    ]
+    images: ["/images/jasmine-1.jpg", "/images/jasmine-2.jpg"],
   },
   {
     id: 8,
@@ -200,10 +181,7 @@ const candleData = [
     safetyInfo: "Trim wick regularly.",
     occasion: ["Work", "Evening"],
 
-    images: [
-      "/images/coffee-1.jpg",
-      "/images/coffee-2.jpg"
-    ]
+    images: ["/images/coffee-1.jpg", "/images/coffee-2.jpg"],
   },
   {
     id: 9,
@@ -225,10 +203,7 @@ const candleData = [
     safetyInfo: "Keep wick trimmed.",
     occasion: ["Daytime", "Work"],
 
-    images: [
-      "/images/mint-1.jpg",
-      "/images/mint-2.jpg"
-    ]
+    images: ["/images/mint-1.jpg", "/images/mint-2.jpg"],
   },
   {
     id: 10,
@@ -250,10 +225,7 @@ const candleData = [
     safetyInfo: "Do not burn near drafts.",
     occasion: ["Evening", "Gift"],
 
-    images: [
-      "/images/amber-1.jpg",
-      "/images/amber-2.jpg"
-    ]
+    images: ["/images/amber-1.jpg", "/images/amber-2.jpg"],
   },
   {
     id: 11,
@@ -275,16 +247,83 @@ const candleData = [
     safetyInfo: "Never leave candle unattended.",
     occasion: ["Yoga", "Meditation"],
 
-    images: [
-      "/images/botanical-1.jpg",
-      "/images/botanical-2.jpg"
-    ]
-  }
+    images: ["/images/botanical-1.jpg", "/images/botanical-2.jpg"],
+  },
+];
+
+const burnData = [
+  {
+    className: "burn1",
+    title: "🕯 First Burn Is Important",
+    description:
+      "Always let your candle burn until the entire top layer melts evenly.This prevents tunneling and helps the candle last longer.",
+  },
+  {
+    className: "burn2",
+    title: "✂ Trim the Wick",
+    description:
+      "Before every burn, trim the wick to ¼ inch. A short wick gives a clean flame, less smoke, and better fragrance.",
+  },
+  {
+    className: "burn3",
+    title: "⏳ Burn Time",
+    description:
+      "Do not burn the candle for more than 3–4 hours at a time. Let the wax cool completely before lighting again.",
+  },
+  {
+    className: "burn4",
+    title: "📍 Right Placement",
+    description:
+      "Place candles on a flat, heat-resistant surface. Avoid fans, AC, or open windows to prevent uneven burning.",
+  },
+  {
+    className: "burn5",
+    title: "🕯 Molded Candle Care",
+    description:
+      "Molded candles are designed to drip while burning. Always place them on a tray or plate to collect wax.",
+  },
+  {
+    className: "burn6",
+    title: "🎨 Custom Candle Care",
+    description:
+      "Each custom candle is hand-poured, so slight variations in color or texture are normal and make it unique.",
+  },
+  {
+    className: "burn7",
+    title: "🔥 Extinguishing the Flame",
+    description:
+      "Avoid blowing out the candle. Instead, gently dip the wick into the wax or use a candle snuffer to reduce smoke.",
+  },
+  {
+    className: "burn8",
+    title: "📦 Storage Tips",
+    description:
+      "Store candles in a cool, dry place away from direct sunlight to maintain color and fragrance.",
+  },
+  {
+    className: "burn9",
+    title: "⚠ Safety First",
+    description:
+      "Never leave a burning candle unattended. Keep away from children and pets. Stop using the candle when ½ inch of wax remains.",
+  },
+  {
+    className: "burn10",
+    title: "🌬 Avoid Drafts",
+    description:
+      "Always burn your candle away from air movement like fans, AC, or open windows.Drafts cause uneven melting, dripping, and smoking, which reduces candle life and fragrance throw.",
+  },
+  {
+    className: "burn11 final",
+    title: "🌿 Final Note",
+    description:
+      "A little care helps your candle burn cleaner, smell better, and last longer.",
+    message: "Enjoy the glow ✨",
+  },
 ];
 
 export const CandleProvider = ({ children }) => {
   return (
-    <CandleContext.Provider value={{ candleData }}>
+    <CandleContext.Provider value={{ candleData, burnData }}>
       {children}
     </CandleContext.Provider>
   );
