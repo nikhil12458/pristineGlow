@@ -217,6 +217,8 @@ body {
   min-height: 100vh;
   background-color: var(--background-color-light-linen);
   padding-top: 0.1px;
+  display: flex;
+  flex-direction: column;
 
   nav.navbar {
     width: 80%;
@@ -257,7 +259,7 @@ body {
       text-decoration: none;
     }
 
-    .nav-items:nth-child(2)::after {
+    .nav-items:nth-child(1)::after {
       content: "";
       position: absolute;
       width: 6rem;
@@ -282,103 +284,54 @@ body {
       rotate: 14deg;
     }
   }
-}
-.contact-heading {
-  text-align: center;
-  padding-top: var(--pad-2xl);
-  font-family: Montserrat;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: underline;
-  color: var(--accent-color);
-}
-.main-contact {
-  padding: 0 10rem;
 
-  .contact-first {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .contact-page {
+    width: 100%;
+    flex: 1;
 
-    .child-name {
-      display: flex;
-      flex-direction: column;
-      font-size: x-large;
-      font-family: Montserrat;
-      font-weight: 500;
-      font-style: normal;
-      color: var(--accent-color);
+    header.contact-header {
+      width: fit-content;
+      margin: var(--mar-sm) auto;
+      @include flex(center, column);
+      gap: calc(var(--gutter-sm) / 6);
+      h1 {
+        font-family: Montserrat;
+        font-weight: 200;
+        color: var(--accent-color);
+      }
 
-      input {
-        height: 2.5rem;
-        width: 18rem;
-        outline: none;
-        border: 1px solid;
-        border-color: var(--accent-color);
-        padding-left: 0.5rem;
+      .underline {
+        width: 100%;
+        height: 1.5px;
+        background-color: var(--accent-color);
+        border-radius: var(--radius-full);
       }
     }
-    .child-email {
-      display: flex;
-      flex-direction: column;
-      font-size: x-large;
-      font-family: Montserrat;
-      font-weight: 500;
-      font-style: normal;
-      color: var(--accent-color);
 
-      input {
-        height: 2.5rem;
-        width: 18rem;
-        outline: none;
-        border: 1px solid;
-        border-color: var(--accent-color);
-        padding-left: 0.5rem;
-      }
-    }
-  }
-  .contact-second {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
+    section.contact-body {
+      width: 80%;
+      margin: 0 auto;
+      background-color: red;
 
-    .child-phonenumber {
-      display: flex;
-      flex-direction: column;
-      font-size: x-large;
-      font-family: Montserrat;
-      font-weight: 500;
-      font-style: normal;
-      color: var(--accent-color);
+      form {
+        width: 100%;
+        background-color: rgba(0, 0, 255, 0.526);
+        display: flex;
+        flex-direction: column;
+        gap: var(--gutter-lg);
 
-      input {
-        height: 2.5rem;
-        outline: none;
-        border: 1px solid;
-        border-color: var(--accent-color);
-        padding-left: 0.5rem;
-      }
-    }
-    .child-message {
-      display: flex;
-      flex-direction: column;
-      font-size: x-large;
-      font-family: Montserrat;
-      font-weight: 500;
-      font-style: normal;
-      color: var(--accent-color);
-      margin-top: 1rem;
+        .form-top {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
 
-      textarea {
-        height: 15rem;
-        resize: none;
-        padding: 0.5rem 0.5rem;
-        outline: none;
-        border: 1px solid;
-        border-color: var(--accent-color);
-
-        textarea::placeholder {
-          font-family: Montserrat;
+          label {
+            span {
+              font-family: Montserrat;
+              font-weight: 600;
+            }
+          }
         }
       }
     }

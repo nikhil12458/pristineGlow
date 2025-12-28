@@ -2,65 +2,57 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <>
-      <h1 className="contact-heading">CONTACT</h1>
-      <form class="main-contact">
-        <div class="contact-first">
-          <div class="child-name">
-            <label for="name">
-              <span>Name</span>
+    <div className="contact-page">
+      <header className="contact-header">
+        <h1>Contact</h1>
+        <div className="underline"></div>
+      </header>
+      <section className="contact-body">
+        <form action="">
+          <div className="form-top">
+            <label>
+              <span>Name:</span>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
             </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              required
-            />
+            <label>
+              <span>Email:</span>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </label>
           </div>
-
-          <div class="child-email">
-            <label for="email">
-              <span>Email</span>
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-        </div>
-
-        <div class="contact-second">
-          <div class="child-phonenumber">
-            <label for="phoneNumber">
-              <span>Phone Number</span>
-            </label>
+          <label>
+            <span>Phone Number</span>
             <input
               type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
+              id="phone"
+              name="phone"
               placeholder="Enter your phone number"
               required
             />
-          </div>
-
-          <div class="child-message">
-            <label for="message">
-              <span>Message</span>
-            </label>
+          </label>
+          <label>
+            <span>Message:</span>
             <textarea
               id="message"
               name="message"
               placeholder="Enter your message"
               required
             ></textarea>
-          </div>
-        </div>
-      </form>
-    </>
+          </label>
+        </form>
+      </section>
+    </div>
   );
 };
 
