@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Contact from "./components/ContactPage/Contact";
+import Contact from "./components/contactPage/Contact";
 import Nav from "./components/navbar/Nav";
 import BottomBar from "./components/bottomBar/BottomBar";
 import { Route, Routes } from "react-router-dom";
