@@ -212,11 +212,20 @@ body {
   flex-direction: $direction;
 }
 
+@mixin contact-span {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--contact-form-button-color);
+}
+
 .main {
   width: 100%;
   min-height: 100vh;
   background-color: var(--background-color-light-linen);
   padding-top: 0.1px;
+  display: flex;
+  flex-direction: column;
 
   nav.navbar {
     width: 80%;
@@ -257,7 +266,7 @@ body {
       text-decoration: none;
     }
 
-    .nav-items:nth-child(2)::after {
+    .nav-items:nth-child(1)::after {
       content: "";
       position: absolute;
       width: 6rem;
@@ -282,103 +291,122 @@ body {
       rotate: 14deg;
     }
   }
-}
-.contact-heading {
-  text-align: center;
-  padding-top: var(--pad-2xl);
-  font-family: Montserrat;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: underline;
-  color: var(--accent-color);
-}
-.main-contact {
-  padding: 0 10rem;
 
-  .contact-first {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .contact-page {
+    width: 100%;
+    flex: 1;
+    position: relative;
 
-    .child-name {
-      display: flex;
-      flex-direction: column;
-      font-size: x-large;
-      font-family: Montserrat;
-      font-weight: 500;
-      font-style: normal;
-      color: var(--accent-color);
+    header.contact-header {
+      width: fit-content;
+      margin: var(--mar-sm) auto;
+      @include flex(center, column);
+      gap: calc(var(--gutter-sm) / 6);
 
-      input {
-        height: 2.5rem;
-        width: 18rem;
-        outline: none;
-        border: 1px solid;
-        border-color: var(--accent-color);
-        padding-left: 0.5rem;
+      h1 {
+        font-family: Montserrat;
+        font-weight: 200;
+        color: var(--accent-color);
+      }
+
+      h1::after {
+        content: " email@gmail.com";
+        display: inline-flex;
+        align-items: center;
+        font-family: Montserrat;
+        font-weight: 300;
+        font-size: 1rem;
+        position: absolute;
+        background-image: url("/svg/mail.svg");
+        background-repeat: no-repeat;
+        background-size: 1.2rem;
+        background-position: left center;
+        padding-left: 1.6rem;
+        right: 10%;
+        top: 2%;
+      }
+
+      .underline {
+        width: 100%;
+        height: 1.5px;
+        background-color: var(--accent-color);
+        border-radius: var(--radius-full);
       }
     }
-    .child-email {
-      display: flex;
-      flex-direction: column;
-      font-size: x-large;
-      font-family: Montserrat;
-      font-weight: 500;
-      font-style: normal;
-      color: var(--accent-color);
 
-      input {
-        height: 2.5rem;
-        width: 18rem;
-        outline: none;
-        border: 1px solid;
-        border-color: var(--accent-color);
-        padding-left: 0.5rem;
-      }
-    }
-  }
-  .contact-second {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
+    section.contact-body {
+      width: 80%;
+      margin: 0 auto;
 
-    .child-phonenumber {
-      display: flex;
-      flex-direction: column;
-      font-size: x-large;
-      font-family: Montserrat;
-      font-weight: 500;
-      font-style: normal;
-      color: var(--accent-color);
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--gutter-sm);
 
-      input {
-        height: 2.5rem;
-        outline: none;
-        border: 1px solid;
-        border-color: var(--accent-color);
-        padding-left: 0.5rem;
-      }
-    }
-    .child-message {
-      display: flex;
-      flex-direction: column;
-      font-size: x-large;
-      font-family: Montserrat;
-      font-weight: 500;
-      font-style: normal;
-      color: var(--accent-color);
-      margin-top: 1rem;
+        .form-top {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
 
-      textarea {
-        height: 15rem;
-        resize: none;
-        padding: 0.5rem 0.5rem;
-        outline: none;
-        border: 1px solid;
-        border-color: var(--accent-color);
+          label {
+            display: flex;
+            flex-direction: column;
+            span {
+              @include contact-span();
+            }
+            input {
+              font-family: Montserrat;
+              font-weight: 600;
+              width: 25vw;
+              padding: var(--pad-sm);
+            }
+          }
+        }
 
-        textarea::placeholder {
+        label.form-center {
+          display: flex;
+          flex-direction: column;
+          span {
+            @include contact-span();
+          }
+
+          input {
+            font-family: Montserrat;
+            font-weight: 600;
+            width: 100%;
+            padding: var(--pad-sm);
+          }
+        }
+
+        label.form-bottom {
+          display: flex;
+          flex-direction: column;
+          span {
+            @include contact-span();
+          }
+          textarea {
+            font-family: Montserrat;
+            font-weight: 600;
+            width: 100%;
+            height: 15rem;
+            resize: none;
+          }
+        }
+
+        button {
+          width: fit-content;
+          padding: var(--pad-sm) var(--pad-md);
+          margin: var(--mar-sm) auto;
           font-family: Montserrat;
+          font-weight: 600;
+          font-size: 1.2rem;
+          color: var(--background-color-light-linen);
+          background-color: var(--contact-form-button-color);
+          border: none;
+          border-radius: var(--radius-md);
+          cursor: pointer;
         }
       }
     }

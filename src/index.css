@@ -182,6 +182,8 @@ body {
   min-height: 100vh;
   background-color: var(--background-color-light-linen);
   padding-top: 0.1px;
+  display: flex;
+  flex-direction: column;
 }
 .main nav.navbar {
   width: 80%;
@@ -219,7 +221,7 @@ body {
   color: var(--text-color);
   text-decoration: none;
 }
-.main nav.navbar .nav-items:nth-child(2)::after {
+.main nav.navbar .nav-items:nth-child(1)::after {
   content: "";
   position: absolute;
   width: 6rem;
@@ -242,101 +244,124 @@ body {
   right: -3%;
   rotate: 14deg;
 }
-
-.contact-heading {
-  text-align: center;
-  padding-top: var(--pad-2xl);
+.main .contact-page {
+  width: 100%;
+  flex: 1;
+  position: relative;
+}
+.main .contact-page header.contact-header {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: var(--mar-sm) auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: calc(var(--gutter-sm) / 6);
+}
+.main .contact-page header.contact-header h1 {
   font-family: Montserrat;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: underline;
+  font-weight: 200;
   color: var(--accent-color);
 }
-
-.main-contact {
-  padding: 0 10rem;
+.main .contact-page header.contact-header h1::after {
+  content: " email@gmail.com";
+  display: inline-flex;
+  align-items: center;
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 1rem;
+  position: absolute;
+  background-image: url("/svg/mail.svg");
+  background-repeat: no-repeat;
+  background-size: 1.2rem;
+  background-position: left center;
+  padding-left: 1.6rem;
+  right: 10%;
+  top: 2%;
 }
-.main-contact .contact-first {
+.main .contact-page header.contact-header .underline {
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--accent-color);
+  border-radius: var(--radius-full);
+}
+.main .contact-page section.contact-body {
+  width: 80%;
+  margin: 0 auto;
+}
+.main .contact-page section.contact-body form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter-sm);
+}
+.main .contact-page section.contact-body form .form-top {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.main-contact .contact-first .child-name {
+.main .contact-page section.contact-body form .form-top label {
   display: flex;
   flex-direction: column;
-  font-size: x-large;
+}
+.main .contact-page section.contact-body form .form-top label span {
   font-family: Montserrat;
-  font-weight: 500;
-  font-style: normal;
-  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--contact-form-button-color);
 }
-.main-contact .contact-first .child-name input {
-  height: 2.5rem;
-  width: 18rem;
-  outline: none;
-  border: 1px solid;
-  border-color: var(--accent-color);
-  padding-left: 0.5rem;
-}
-.main-contact .contact-first .child-email {
-  display: flex;
-  flex-direction: column;
-  font-size: x-large;
+.main .contact-page section.contact-body form .form-top label input {
   font-family: Montserrat;
-  font-weight: 500;
-  font-style: normal;
-  color: var(--accent-color);
+  font-weight: 600;
+  width: 25vw;
+  padding: var(--pad-sm);
 }
-.main-contact .contact-first .child-email input {
-  height: 2.5rem;
-  width: 18rem;
-  outline: none;
-  border: 1px solid;
-  border-color: var(--accent-color);
-  padding-left: 0.5rem;
-}
-.main-contact .contact-second {
+.main .contact-page section.contact-body form label.form-center {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
 }
-.main-contact .contact-second .child-phonenumber {
-  display: flex;
-  flex-direction: column;
-  font-size: x-large;
+.main .contact-page section.contact-body form label.form-center span {
   font-family: Montserrat;
-  font-weight: 500;
-  font-style: normal;
-  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--contact-form-button-color);
 }
-.main-contact .contact-second .child-phonenumber input {
-  height: 2.5rem;
-  outline: none;
-  border: 1px solid;
-  border-color: var(--accent-color);
-  padding-left: 0.5rem;
+.main .contact-page section.contact-body form label.form-center input {
+  font-family: Montserrat;
+  font-weight: 600;
+  width: 100%;
+  padding: var(--pad-sm);
 }
-.main-contact .contact-second .child-message {
+.main .contact-page section.contact-body form label.form-bottom {
   display: flex;
   flex-direction: column;
-  font-size: x-large;
-  font-family: Montserrat;
-  font-weight: 500;
-  font-style: normal;
-  color: var(--accent-color);
-  margin-top: 1rem;
 }
-.main-contact .contact-second .child-message textarea {
+.main .contact-page section.contact-body form label.form-bottom span {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--contact-form-button-color);
+}
+.main .contact-page section.contact-body form label.form-bottom textarea {
+  font-family: Montserrat;
+  font-weight: 600;
+  width: 100%;
   height: 15rem;
   resize: none;
-  padding: 0.5rem 0.5rem;
-  outline: none;
-  border: 1px solid;
-  border-color: var(--accent-color);
 }
-.main-contact .contact-second .child-message textarea textarea::-moz-placeholder {
+.main .contact-page section.contact-body form button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: var(--pad-sm) var(--pad-md);
+  margin: var(--mar-sm) auto;
   font-family: Montserrat;
-}
-.main-contact .contact-second .child-message textarea textarea::placeholder {
-  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--background-color-light-linen);
+  background-color: var(--contact-form-button-color);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */
