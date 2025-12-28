@@ -11,7 +11,7 @@ const Contact = () => {
         <form action="">
           <div className="form-top">
             <label>
-              <span>Name:</span>
+              <span>Name</span>
               <input
                 type="text"
                 id="name"
@@ -21,7 +21,7 @@ const Contact = () => {
               />
             </label>
             <label>
-              <span>Email:</span>
+              <span>Email</span>
               <input
                 type="email"
                 id="email"
@@ -31,7 +31,7 @@ const Contact = () => {
               />
             </label>
           </div>
-          <label>
+          <label className="form-center">
             <span>Phone Number</span>
             <input
               type="tel"
@@ -41,8 +41,8 @@ const Contact = () => {
               required
             />
           </label>
-          <label>
-            <span>Message:</span>
+          <label className="form-bottom">
+            <span>Message</span>
             <textarea
               id="message"
               name="message"
@@ -50,6 +50,7 @@ const Contact = () => {
               required
             ></textarea>
           </label>
+          <button>Request callback</button>
         </form>
       </section>
     </div>

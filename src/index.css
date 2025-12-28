@@ -247,6 +247,7 @@ body {
 .main .contact-page {
   width: 100%;
   flex: 1;
+  position: relative;
 }
 .main .contact-page header.contact-header {
   width: -moz-fit-content;
@@ -263,6 +264,22 @@ body {
   font-weight: 200;
   color: var(--accent-color);
 }
+.main .contact-page header.contact-header h1::after {
+  content: " email@gmail.com";
+  display: inline-flex;
+  align-items: center;
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 1rem;
+  position: absolute;
+  background-image: url("/svg/mail.svg");
+  background-repeat: no-repeat;
+  background-size: 1.2rem;
+  background-position: left center;
+  padding-left: 1.6rem;
+  right: 10%;
+  top: 2%;
+}
 .main .contact-page header.contact-header .underline {
   width: 100%;
   height: 1.5px;
@@ -272,14 +289,12 @@ body {
 .main .contact-page section.contact-body {
   width: 80%;
   margin: 0 auto;
-  background-color: red;
 }
 .main .contact-page section.contact-body form {
   width: 100%;
-  background-color: rgba(0, 0, 255, 0.526);
   display: flex;
   flex-direction: column;
-  gap: var(--gutter-lg);
+  gap: var(--gutter-sm);
 }
 .main .contact-page section.contact-body form .form-top {
   width: 100%;
@@ -287,7 +302,66 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.main .contact-page section.contact-body form .form-top label {
+  display: flex;
+  flex-direction: column;
+}
 .main .contact-page section.contact-body form .form-top label span {
   font-family: Montserrat;
   font-weight: 600;
+  font-size: 2rem;
+  color: var(--contact-form-button-color);
+}
+.main .contact-page section.contact-body form .form-top label input {
+  font-family: Montserrat;
+  font-weight: 600;
+  width: 25vw;
+  padding: var(--pad-sm);
+}
+.main .contact-page section.contact-body form label.form-center {
+  display: flex;
+  flex-direction: column;
+}
+.main .contact-page section.contact-body form label.form-center span {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--contact-form-button-color);
+}
+.main .contact-page section.contact-body form label.form-center input {
+  font-family: Montserrat;
+  font-weight: 600;
+  width: 100%;
+  padding: var(--pad-sm);
+}
+.main .contact-page section.contact-body form label.form-bottom {
+  display: flex;
+  flex-direction: column;
+}
+.main .contact-page section.contact-body form label.form-bottom span {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--contact-form-button-color);
+}
+.main .contact-page section.contact-body form label.form-bottom textarea {
+  font-family: Montserrat;
+  font-weight: 600;
+  width: 100%;
+  height: 15rem;
+  resize: none;
+}
+.main .contact-page section.contact-body form button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: var(--pad-sm) var(--pad-md);
+  margin: var(--mar-sm) auto;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--background-color-light-linen);
+  background-color: var(--contact-form-button-color);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */
