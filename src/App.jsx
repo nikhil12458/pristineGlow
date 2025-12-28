@@ -1,10 +1,8 @@
 import React, { useContext } from "react";
-import Contact from "./components/contactPage/Contact";
 import Nav from "./components/navbar/Nav";
-import BottomBar from "./components/bottomBar/BottomBar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/home/Home";
-import Button from "./components/button/Button";
+import Contact from "./components/contactPage/Contact"
 
 const App = () => {
   return (
@@ -13,7 +11,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<contact />} />
       </Routes>
     </div>
   );
