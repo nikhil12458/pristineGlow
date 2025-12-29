@@ -1,11 +1,19 @@
-import React from 'react'
+import React from "react";
 
-const BurnCard = () => {
+const BurnCard = ({ item }) => {
   return (
-    <div>
-      BurnCard
+    <div className={`burnCard ${item.className}`}>
+      <h2>{item.title}</h2>
+      <div className="cardDescription">
+        {item.description.split("<br>").map((line, index) => (
+          <React.Fragment key={index}>
+            <p>{`:) ${line}`}</p>
+            <br />
+          </React.Fragment>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default BurnCard
+export default BurnCard;

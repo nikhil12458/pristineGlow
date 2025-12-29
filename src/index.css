@@ -125,6 +125,7 @@
   --background-color-light-linen: #f4f1ec; /* for home contact and standard pages */
   --nav-background-color: #ccc6bb66; /* Light Beige --> navbar background */
   --accent-color-button: rgba(201, 162, 77, 0.3);
+  --burn-card-background-color: #8faf9a57;
   /* text color */
   --text-color: #3b2f2f; /* Deep Brown --> text */
   --contact-form-button-color: #847045; /* darker gold --> for form text and buttons */
@@ -385,4 +386,57 @@ body {
 }
 .main .button-component:active {
   scale: 0.98;
+}
+.main .burnCard {
+  width: 30rem;
+  height: 12rem;
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--accent-color);
+  background-color: var(--burn-card-background-color);
+  padding: var(--pad-md) var(--pad-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter-sm);
+  /* Frosted blur */
+  backdrop-filter: blur(22px) saturate(170%);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  /* Inner light */
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), inset 0 10px 20px rgba(255, 255, 255, 0.15), 0 5px 15px rgba(0, 0, 0, 0.185), 0 0 20px rgba(120, 255, 200, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.main .burnCard h2 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: large;
+  color: var(--accent-color);
+}
+.main .burnCard p {
+  font-family: Montserrat;
+  font-weight: 600;
+  color: var(--contact-form-button-color);
+  font-size: medium;
+  line-height: 1.5rem;
+}
+.main .burnBody {
+  width: 100%;
+  flex: 1;
+  padding: var(--pad-lg) var(--pad-sm);
+}
+.main .burnBody .glowHeading {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: var(--mar-sm);
+}
+.main .burnBody .glowCards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter-sm);
+  justify-content: space-around;
+}
+.main .burnBody .burn10 {
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */

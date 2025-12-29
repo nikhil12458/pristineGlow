@@ -254,33 +254,33 @@ const candleData = [
 const burnData = [
   {
     className: "burn1",
-    title: "🕯 First Burn Is Important",
+    title: "🕯️ First Burn Is Important",
     description:
-      "Always let your candle burn until the entire top layer melts evenly.This prevents tunneling and helps the candle last longer.",
+      "Always let your candle burn until the entire top layer melts evenly. <br>This prevents tunneling and helps the candle last longer.",
   },
   {
     className: "burn2",
-    title: "✂ Trim the Wick",
+    title: "✂️ Trim the Wick",
     description:
-      "Before every burn, trim the wick to ¼ inch. A short wick gives a clean flame, less smoke, and better fragrance.",
+      "Before every burn, trim the wick to ¼ inch. <br>A short wick gives a clean flame, less smoke, and better fragrance.",
   },
   {
     className: "burn3",
     title: "⏳ Burn Time",
     description:
-      "Do not burn the candle for more than 3–4 hours at a time. Let the wax cool completely before lighting again.",
+      "Do not burn the candle for more than 3–4 hours at a time.<br>Let the wax cool completely before lighting again.",
   },
   {
     className: "burn4",
     title: "📍 Right Placement",
     description:
-      "Place candles on a flat, heat-resistant surface. Avoid fans, AC, or open windows to prevent uneven burning.",
+      "Place candles on a flat, heat-resistant surface. <br>Avoid fans, AC, or open windows to prevent uneven burning.",
   },
   {
     className: "burn5",
-    title: "🕯 Molded Candle Care",
+    title: "🕯️ Molded Candle Care",
     description:
-      "Molded candles are designed to drip while burning. Always place them on a tray or plate to collect wax.",
+      "Molded candles are designed to drip while burning. <br>Always place them on a tray or plate to collect wax.",
   },
   {
     className: "burn6",
@@ -302,18 +302,12 @@ const burnData = [
   },
   {
     className: "burn9",
-    title: "⚠ Safety First",
+    title: "⚠️ Safety First",
     description:
-      "Never leave a burning candle unattended. Keep away from children and pets. Stop using the candle when ½ inch of wax remains.",
+      "Never leave a burning candle unattended. <br>Keep away from children and pets. <br>Stop using the candle when ½ inch of wax remains.",
   },
   {
-    className: "burn10",
-    title: "🌬 Avoid Drafts",
-    description:
-      "Always burn your candle away from air movement like fans, AC, or open windows.Drafts cause uneven melting, dripping, and smoking, which reduces candle life and fragrance throw.",
-  },
-  {
-    className: "burn11 final",
+    className: "burn10 finalBurn",
     title: "🌿 Final Note",
     description:
       "A little care helps your candle burn cleaner, smell better, and last longer.",
