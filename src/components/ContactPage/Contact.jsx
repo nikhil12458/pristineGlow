@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import Button from "../button/Button";
 
 const Contact = () => {
+  useEffect(() => {
+    document.querySelector(".main").style.backgroundColor = `var(--background-color)`;
+  }, []);
   return (
     <>
       <Helmet>

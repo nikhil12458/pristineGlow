@@ -131,6 +131,7 @@
   --background-color-light-linen: #f4f1ec; /* for home contact and standard pages */
   --nav-background-color: #ccc6bb66; /* Light Beige --> navbar background */
   --accent-color-button: rgba(201, 162, 77, 0.3);
+  --accent-color-button-buy: rgba(201, 162, 77, 0.156);
   --burn-card-background-color: #8faf9a57;
   /* text color */
   --text-color: #3b2f2f; /* Deep Brown --> text */
@@ -200,6 +201,7 @@ body {
   padding-top: 0.1px;
   display: flex;
   flex-direction: column;
+  transition: background-color 0.3s linear;
 }
 .main nav.navbar {
   width: 80%;
@@ -511,7 +513,6 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: var(--gutter-md);
-  flex-wrap: wrap;
 }
 .main .homePage .homeCards .homeCard {
   display: flex;
@@ -521,7 +522,7 @@ body {
   gap: 0.4rem;
 }
 .main .homePage .homeCards .homeCard .imgContainer {
-  width: 14.5rem;
+  width: 16.5rem;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -549,4 +550,104 @@ body {
 .main .homePage .homeCards .homeCard .productTitle .price {
   font-size: 1rem;
   color: var(--accent-color);
+}
+.main .productPage {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  gap: var(--gutter-md);
+}
+.main .productPage .left {
+  width: 35%;
+  padding-block: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.main .productPage .left .crop {
+  height: 60%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.main .productPage .left .crop img {
+  height: 28rem;
+}
+.main .productPage .right {
+  width: 75%;
+  padding-block: 3rem;
+  padding-inline: 4rem;
+  color: var(--text-color);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter-sm);
+}
+.main .productPage .right h3 {
+  font-family: Allerta;
+  font-weight: 400;
+  font-size: 2.8rem;
+  width: 80%;
+}
+.main .productPage .right p {
+  font-family: Allerta;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.main .productPage .right .quantity {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter-sm);
+}
+.main .productPage .right .quantity h3 {
+  font-family: Allerta;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.main .productPage .right .quantity .selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem 0;
+  width: 12rem;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+}
+.main .productPage .right .quantity .selector .increment,
+.main .productPage .right .quantity .selector .decrement {
+  cursor: pointer;
+}
+.main .productPage .right .quantity .selector::-moz-selection {
+  background-color: transparent;
+}
+.main .productPage .right .quantity .selector::selection {
+  background-color: transparent;
+}
+.main .productPage .right .button-component {
+  width: 100%;
+  padding: var(--pad-sm) var(--pad-md);
+  font-weight: 600;
+  font-size: 2rem;
+  box-shadow: none;
+  background-color: var(--accent-color-button-buy);
+}
+.main .productPage .right .line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-color);
+  border-radius: var(--radius-full);
+}
+.main .productPage .right .details {
+  width: 100%;
+}
+.main .productPage .right .details h2 {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+.main .productPage .right .details p {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 95%;
+  text-align: left;
 }/*# sourceMappingURL=index.css.map */

@@ -1,10 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import BurnCard from "../card/BurnCard";
 import { CandleContext } from "../../context/CandleProvider";
 import { Helmet } from "react-helmet-async";
 
 const Burn = () => {
   const { burnData } = useContext(CandleContext);
+  useEffect(() => {
+    document.querySelector(".main").style.backgroundColor = `var(--background-color)`;
+  }, []);
   return (
     <div className="burnBody">
       <Helmet>

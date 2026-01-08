@@ -14,7 +14,11 @@ const candleData = [
     fragrance: "Ocean, Sea Salt",
     price: 799,
     stock: 12,
-    images: ["/img/ocean-themed-candle-prop-2.png","/img/ocean-themed-candle-prop-1.png"],
+    backgroundColor: "#AED6D9",
+    images: [
+      "/img/ocean-themed-candle-prop-2.png",
+      "/img/ocean-themed-candle-prop-1.png",
+    ],
   },
 
   {
@@ -28,7 +32,11 @@ const candleData = [
     fragrance: "Mild Vanilla",
     price: 699,
     stock: 15,
-    images: ["/img/bubble-cube-candles-prop-2.png","/img/bubble-cube-candles-prop-1.png"],
+    backgroundColor: "#FDF1F5",
+    images: [
+      "/img/bubble-cube-candles-prop-2.png",
+      "/img/bubble-cube-candles-prop-1.png",
+    ],
   },
 
   {
@@ -42,6 +50,7 @@ const candleData = [
     fragrance: "Mild Vanilla",
     price: 549,
     stock: 18,
+    backgroundColor: "#FFDEC7",
     images: ["/img/bubble-cube-small-candles-prop-1.png"],
   },
 
@@ -55,7 +64,8 @@ const candleData = [
     fragrance: "Pine",
     price: 899,
     stock: 8,
-    images: [ "/img/christmas-tree-candle-prop-1.png"],
+    backgroundColor: "#FCECEE",
+    images: ["/img/christmas-tree-candle-prop-1.png"],
   },
 
   {
@@ -68,7 +78,11 @@ const candleData = [
     fragrance: "Cinnamon Pine",
     price: 949,
     stock: 7,
-    images: ["/img/christmas-wreath-candle-prop-2.png", "/img/christmas-wreath-candle-prop-1.png"],
+    backgroundColor: "#FFF1F1",
+    images: [
+      "/img/christmas-wreath-candle-prop-2.png",
+      "/img/christmas-wreath-candle-prop-1.png",
+    ],
   },
 
   {
@@ -81,7 +95,8 @@ const candleData = [
     fragrance: "Unscented",
     price: 749,
     stock: 10,
-    images: ["/img/dia-candle-prop-1.png","/img/clay-dia-candle-prop-1.png",],
+    backgroundColor: "#E7DED6",
+    images: ["/img/clay-dia-candle-prop-1.png"],
   },
 
   {
@@ -94,7 +109,8 @@ const candleData = [
     fragrance: "Coconut",
     price: 999,
     stock: 6,
-    images: ["/img/coconut-shell-candle-prop-1.png",],
+    backgroundColor: "#F5E2D1",
+    images: ["/img/coconut-shell-candle-prop-1.png"],
   },
 
   {
@@ -107,7 +123,8 @@ const candleData = [
     fragrance: "Custom Blend",
     price: 1099,
     stock: 5,
-    images: ["/img/custom-candle-prop-2.png","/img/custom-candle-prop-1.png",],
+    backgroundColor: "#DBDBDB",
+    images: ["/img/custom-candle-prop-2.png", "/img/custom-candle-prop-1.png"],
   },
 
   {
@@ -120,7 +137,8 @@ const candleData = [
     fragrance: "Light Floral",
     price: 849,
     stock: 9,
-    images: ["/img/daisy-candle-prop-1.png",],
+    backgroundColor: "#FEE0D5",
+    images: ["/img/daisy-candle-prop-1.png"],
   },
 
   {
@@ -133,7 +151,8 @@ const candleData = [
     fragrance: "Rose",
     price: 899,
     stock: 10,
-    images: ["/img/decorative-rose-candle-prop-1.png",],
+    backgroundColor: "#E4D0D1",
+    images: ["/img/decorative-rose-candle-prop-1.png"],
   },
 
   {
@@ -146,7 +165,8 @@ const candleData = [
     fragrance: "Unscented",
     price: 799,
     stock: 14,
-    images: ["/img/fluted-piller-candle-prop-1.png",],
+    backgroundColor: "#DDCCD4",
+    images: ["/img/fluted-piller-candle-prop-1.png"],
   },
 
   {
@@ -159,20 +179,22 @@ const candleData = [
     fragrance: "Jasmine",
     price: 1199,
     stock: 4,
-    images: ["/img/gel-candle-peacock-prop-1.png",],
+    backgroundColor: "#FDEDD0",
+    images: ["/img/gel-candle-peacock-prop-1.png"],
   },
 
   {
     id: 13,
     slug: "mandala-tin-candle",
-    mainImg: "/img/mandala-tin-candle-prop-1.png",
+    mainImg: "/img/mandala-tin-candle-2-prop-1.png",
     name: "Mandala Tin Candle",
     description: "Mandala-pattern tin candle ideal for meditation spaces.",
     category: "Spiritual",
     fragrance: "Sandalwood",
     price: 899,
     stock: 11,
-    images: ["/img/mandala-tin-candle-2-prop-1.png","/img/mandala-tin-candle-prop-1.png",],
+    backgroundColor: "#FCEBF1",
+    images: ["/img/mandala-tin-candle-2-prop-1.png"],
   },
 
   {
@@ -185,7 +207,8 @@ const candleData = [
     fragrance: "Sweet Vanilla",
     price: 649,
     stock: 16,
-    images: ["/img/modak-prop-1.png",],
+    backgroundColor: "#F7D6CA",
+    images: ["/img/modak-prop-1.png"],
   },
 
   {
@@ -198,7 +221,8 @@ const candleData = [
     fragrance: "Peony Rose",
     price: 899,
     stock: 7,
-    images: ["/img/peony-candle-prop-2.png","/img/peony-candle-prop-1.png",],
+    backgroundColor: "#8ABDBD",
+    images: ["/img/peony-candle-prop-2.png", "/img/peony-candle-prop-1.png"],
   },
 
   {
@@ -211,7 +235,11 @@ const candleData = [
     fragrance: "Woody Musk",
     price: 999,
     stock: 5,
-    images: ["/img/poker-themed-jar-candle-prop-2.png","/img/poker-themed-jar-candle-prop-1.png",],
+    backgroundColor: "#F7D6CA",
+    images: [
+      "/img/poker-themed-jar-candle-prop-2.png",
+      "/img/poker-themed-jar-candle-prop-1.png",
+    ],
   },
 
   {
@@ -224,7 +252,8 @@ const candleData = [
     fragrance: "Sweet Sugar",
     price: 599,
     stock: 20,
-    images: ["/img/rasgulla-candle-prop-1.png",],
+    backgroundColor: "#FDE4C9",
+    images: ["/img/rasgulla-candle-prop-1.png"],
   },
 
   {
@@ -237,7 +266,8 @@ const candleData = [
     fragrance: "Rose",
     price: 949,
     stock: 11,
-    images: ["/img/rose-bouquet-candle-prop-1.png",],
+    backgroundColor: "#FDD2DC",
+    images: ["/img/rose-bouquet-candle-prop-1.png"],
   },
 
   {
@@ -250,6 +280,7 @@ const candleData = [
     fragrance: "Rose",
     price: 899,
     stock: 10,
+    backgroundColor: "#FFABB1",
     images: ["/img/rose-scented-mandala-tin-candle-prop-1.png"],
   },
 
@@ -263,7 +294,8 @@ const candleData = [
     fragrance: "Unscented",
     price: 299,
     stock: 50,
-    images: [ "/img/tealight-candle-prop-1.png",],
+    backgroundColor: "#FEE6C6",
+    images: ["/img/tealight-candle-prop-1.png"],
   },
 
   {
@@ -276,7 +308,53 @@ const candleData = [
     fragrance: "Lavender",
     price: 799,
     stock: 20,
-    images: ["/img/tin-soy-wax-candle.png",],
+    backgroundColor: "#FEECEC",
+    images: ["/img/tin-soy-wax-candle.png"],
+  },
+
+  {
+    id: 22,
+    slug: "bell-shaped-novlety-candle",
+    mainImg: "/img/bell-shaped-novelty-candle-prop-1.png",
+    name: "Bell Shaped Novelty Candle",
+    description: "Bold poker-themed jar candle with a masculine aesthetic.",
+    category: "Theme",
+    fragrance: "Woody Musk",
+    price: 999,
+    stock: 5,
+    backgroundColor: "#FCF2F0",
+    images: [
+      "/img/bell-shaped-novelty-candle-prop-1.png",
+      "/img/bell-shaped-novelty-candle-prop-2.png",
+    ],
+  },
+
+  {
+    id: 23,
+    slug: "tin-soy-wax-candle",
+    mainImg: "/img/dia-candle-prop-1.png",
+    name: "Tin Soy Wax Candle",
+    description: "Minimal soy wax candle in a reusable tin container.",
+    category: "Classic",
+    fragrance: "Lavender",
+    price: 799,
+    stock: 20,
+    backgroundColor: "#C5AE9E",
+    images: ["/img/dia-candle-prop-1.png"],
+  },
+
+  {
+    id: 24,
+    slug: "bell-shaped-novlety-candle",
+    mainImg: "/img/mandala-tin-candle-prop-1.png",
+    name: "Poker Jar Candle",
+    description: "Bold poker-themed jar candle with a masculine aesthetic.",
+    category: "Theme",
+    fragrance: "Woody Musk",
+    price: 999,
+    stock: 5,
+    backgroundColor: "#FEEFD2",
+    images: ["/img/mandala-tin-candle-prop-1.png"],
   },
 ];
 

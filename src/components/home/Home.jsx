@@ -1,14 +1,16 @@
-import React from "react";
 import HomeCard from "../card/HomeCard";
 import HomeBanner from "../banners/HomeBanner";
-import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    document.querySelector(".main").style.backgroundColor = `var(--background-color)`;
+  }, []);
+
   return (
     <section className="homePage">
       <HomeBanner />
       <HomeCard />
-      <Outlet />
     </section>
   );
 };
