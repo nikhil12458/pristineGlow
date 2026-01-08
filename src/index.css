@@ -116,6 +116,12 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: "Pacifico";
+  src: url("/fonts/Pacifico-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 :root {
   /* color palette */
   --primary-color: #2f4f3e; /* Forest Green --> Headers */
@@ -189,7 +195,7 @@ body {
 
 .main {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: var(--background-color-light-linen);
   padding-top: 0.1px;
   display: flex;
@@ -447,4 +453,100 @@ body {
 }
 .main .burnBody .burn10 {
   width: 100%;
+}
+.main .homePage {
+  width: 100%;
+  flex: 1;
+}
+.main .homePage .homeBanner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-block: 2rem;
+}
+.main .homePage .homeBanner img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
+  position: relative;
+}
+.main .homePage .homeBanner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 12px 12px 20px var(--background-color), inset -12px -12px 12px var(--background-color);
+  pointer-events: none;
+}
+.main .homePage .homeBanner .bannerContent {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gutter-lg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.main .homePage .homeBanner .bannerContent img {
+  width: 9rem;
+}
+.main .homePage .homeBanner .bannerContent h4 {
+  text-align: center;
+  font-family: Pacifico;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--text-color);
+}
+.main .homePage .homeBanner .bannerContent h4 span {
+  font-style: italic;
+}
+.main .homePage .homeCards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--gutter-md);
+  flex-wrap: wrap;
+}
+.main .homePage .homeCards .homeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.main .homePage .homeCards .homeCard .imgContainer {
+  width: 14.5rem;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.main .homePage .homeCards .homeCard .imgContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.main .homePage .homeCards .homeCard .productTitle {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+.main .homePage .homeCards .homeCard .productTitle a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.main .homePage .homeCards .homeCard .productTitle:hover {
+  text-decoration: underline;
+}
+.main .homePage .homeCards .homeCard .productTitle .price {
+  font-size: 1rem;
+  color: var(--accent-color);
 }/*# sourceMappingURL=index.css.map */
