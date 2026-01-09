@@ -573,6 +573,9 @@ body {
           }
         }
       }
+      &::selection{
+        background-color: transparent;
+      }
     }
 
     .homeCards {
@@ -634,12 +637,26 @@ body {
       padding-block: 1rem;
       display: flex;
       justify-content: center;
+      position: relative;
+      overflow: hidden;
       .crop {
         height: 60%;
         border-radius: 20px;
         overflow: hidden;
         img {
           height: 28rem;
+        }
+      }
+      .propImage{
+        width: 20rem;
+        position: absolute;
+        bottom: -4rem;
+        left: -3rem;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
         }
       }
     }
@@ -684,7 +701,8 @@ body {
           width: 12rem;
           border: 2px solid var(--text-color);
           color: var(--text-color);
-
+          border-radius: var(--radius-lg);
+          
           .increment,
           .decrement {
             cursor: pointer;
@@ -695,30 +713,55 @@ body {
         }
       }
 
+      .fragrance{
+        h2{
+          font-family: Allerta;
+          font-size: 2rem;
+        }
+
+        p{
+          font-family: Montserrat;
+          font-weight: 500;
+          font-size: 2rem;
+          color: var(--contact-form-button-color);
+        }
+      }
+
       .button-component {
         width: 100%;
         padding: var(--pad-sm) var(--pad-md);
         font-weight: 600;
         font-size: 2rem;
+        color: var(--text-color);
+        font-family: Allerta;
+        border: 2px solid rgb(255, 255, 255);
         box-shadow: none;
         background-color: var(--accent-color-button-buy);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        img {
+          width: 3rem;
+        }
       }
 
-      .line{
+      .line {
         width: 100%;
         height: 3px;
         background-color: var(--text-color);
         border-radius: var(--radius-full);
       }
 
-      .details{
+      .details {
         width: 100%;
-        h2{
+        h2 {
           font-family: Montserrat;
           font-weight: 600;
           font-size: 1.7rem;
         }
-        p{
+        p {
           font-family: Montserrat;
           font-weight: 600;
           font-size: 1rem;
@@ -726,9 +769,10 @@ body {
           text-align: left;
         }
       }
-      
     }
+    &::selection{
+      background-color: transparent;
+    }
+    
   }
-
-  
 }

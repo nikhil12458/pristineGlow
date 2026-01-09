@@ -7,8 +7,7 @@ const ProductPage = () => {
   const { id } = useParams();
 
   const { candleData } = useContext(CandleContext);
-  const {name, backgroundColor, description, price, mainImg} = candleData[id - 1];
-  console.log(backgroundColor)
+  const {name, backgroundColor, description, price, mainImg, fragrance, prop} = candleData[id - 1];
 
   const [num, setNum] = useState(1);
 
@@ -21,6 +20,9 @@ const ProductPage = () => {
       <div className="left">
         <div className="crop">
           <img src={mainImg} alt="" />
+        </div>
+        <div className="propImage">
+          <img src={prop} alt="" />
         </div>
       </div>
       <div className="right">
@@ -48,7 +50,11 @@ const ProductPage = () => {
             </div>
           </div>
         </div>
-        <Button text={"BUY NOW"} />
+        <div className="fragrance">
+          <h2>Fragrance</h2>
+          <p>{fragrance}</p>
+        </div>
+        <Button text={"BUY NOW"} img={"/logo/WhatsApp.png"} />
         <div className="line"></div>
         <div className="details">
           <h2>Details</h2>
