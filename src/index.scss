@@ -573,7 +573,7 @@ body {
           }
         }
       }
-      &::selection{
+      &::selection {
         background-color: transparent;
       }
     }
@@ -647,12 +647,12 @@ body {
           height: 28rem;
         }
       }
-      .propImage{
+      .propImage {
         width: 20rem;
         position: absolute;
         bottom: -4rem;
         left: -3rem;
-        img{
+        img {
           width: 100%;
           height: 100%;
           object-fit: cover;
@@ -702,7 +702,7 @@ body {
           border: 2px solid var(--text-color);
           color: var(--text-color);
           border-radius: var(--radius-lg);
-          
+
           .increment,
           .decrement {
             cursor: pointer;
@@ -713,13 +713,13 @@ body {
         }
       }
 
-      .fragrance{
-        h2{
+      .fragrance {
+        h2 {
           font-family: Allerta;
           font-size: 2rem;
         }
 
-        p{
+        p {
           font-family: Montserrat;
           font-weight: 500;
           font-size: 2rem;
@@ -770,9 +770,97 @@ body {
         }
       }
     }
-    &::selection{
+    &::selection {
       background-color: transparent;
     }
-    
+  }
+
+  section.customCandle {
+    width: 100%;
+    flex: 1;
+    padding: 2rem;
+
+    .customHeading {
+      font-family: Pacifico;
+      font-size: 3.5rem;
+      text-align: center;
+      color: var(--text-color);
+    }
+
+    .options {
+      display: flex;
+      gap: 5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      .field {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        h3 {
+          font-family: Montserrat;
+          text-transform: capitalize;
+          font-size: 2rem;
+        }
+        .customGrid {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .customCard {
+            border: 2px solid var(--accent-color);
+            padding: 1rem 2rem;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+
+            p {
+              font-family: Montserrat;
+              font-weight: 600;
+              font-size: 1rem;
+            }
+          }
+
+          .active {
+            border-color: var(--burn-card-background-color);
+          }
+        }
+      }
+    }
+
+    form {
+      display: none;
+    }
+
+    .details {
+
+      margin: 2rem 2rem;
+      
+      h3 {
+        font-family: Montserrat;
+        text-transform: capitalize;
+        font-size: 2rem;
+      }
+      input{
+        padding: 1rem 1rem;
+        border-radius: var(--radius-md);
+        border: 2px solid var(--accent-color);
+        font-family: Montserrat;
+        font-size: 1rem;
+      }
+    }
+
+    .customBtn {
+      display: block;
+      margin: 2rem auto;
+      padding: var(--pad-sm) var(--pad-md);
+      font-family: Montserrat;
+      font-size: 2rem;
+      font-weight: 700;
+      outline: none;
+      border: 2px solid var(--accent-color);
+      border-radius: var(--radius-lg);
+      color: var(--contact-form-button-color);
+      cursor: pointer;
+    }
   }
 }

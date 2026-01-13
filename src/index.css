@@ -699,4 +699,82 @@ body {
 }
 .main .productPage::selection {
   background-color: transparent;
+}
+.main section.customCandle {
+  width: 100%;
+  flex: 1;
+  padding: 2rem;
+}
+.main section.customCandle .customHeading {
+  font-family: Pacifico;
+  font-size: 3.5rem;
+  text-align: center;
+  color: var(--text-color);
+}
+.main section.customCandle .options {
+  display: flex;
+  gap: 5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main section.customCandle .options .field {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.main section.customCandle .options .field h3 {
+  font-family: Montserrat;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+.main section.customCandle .options .field .customGrid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main section.customCandle .options .field .customGrid .customCard {
+  border: 2px solid var(--accent-color);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+}
+.main section.customCandle .options .field .customGrid .customCard p {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.main section.customCandle .options .field .customGrid .active {
+  border-color: var(--burn-card-background-color);
+}
+.main section.customCandle form {
+  display: none;
+}
+.main section.customCandle .details {
+  margin: 2rem 2rem;
+}
+.main section.customCandle .details h3 {
+  font-family: Montserrat;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+.main section.customCandle .details input {
+  padding: 1rem 1rem;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--accent-color);
+  font-family: Montserrat;
+  font-size: 1rem;
+}
+.main section.customCandle .customBtn {
+  display: block;
+  margin: 2rem auto;
+  padding: var(--pad-sm) var(--pad-md);
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-weight: 700;
+  outline: none;
+  border: 2px solid var(--accent-color);
+  border-radius: var(--radius-lg);
+  color: var(--contact-form-button-color);
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

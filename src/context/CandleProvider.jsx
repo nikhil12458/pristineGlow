@@ -449,9 +449,92 @@ const burnData = [
   },
 ];
 
+const customData = [
+  {
+    id: 1,
+    name: "Small",
+    category: "size",
+  },
+  {
+    id: 2,
+    name: "Medium",
+    category: "size",
+  },
+  {
+    id: 3,
+    name: "Large",
+    category: "size",
+  },
+  {
+    id: 4,
+    name: "Jar candle",
+    category: "type",
+  },
+  {
+    id: 5,
+    name: "Flower",
+    category: "type",
+  },
+  {
+    id: 6,
+    name: "Photo candle",
+    category: "type",
+  },
+  {
+    id: 7,
+    name: "Gift candle",
+    category: "type",
+  },
+  {
+    id: 8,
+    name: "Flora",
+    category: "fragrance",
+  },
+  {
+    id: 9,
+    name: "Woody",
+    category: "fragrance",
+  },
+  {
+    id: 10,
+    name: "Fresh",
+    category: "fragrance",
+  },
+  {
+    id: 11,
+    name: "Sweet",
+    category: "fragrance",
+  },
+  {
+    id: 12,
+    name: "Unscented",
+    category: "fragrance",
+  },
+  {
+    id: 13,
+    name: "Basic",
+    category: "packaging",
+  },
+  {
+    id: 14,
+    name: "Gift box",
+    category: "packaging",
+  },
+  {
+    id: 15,
+    name: "Premium",
+    category: "packaging",
+  },
+  {
+    id: 16,
+    name: "Eco-friendly",
+    category: "packaging",
+  },
+];
+
 export const CandleProvider = ({ children }) => {
   return (
-    <CandleContext.Provider value={{ candleData, burnData }}>
+    <CandleContext.Provider value={{ candleData, burnData, customData }}>
       {children}
     </CandleContext.Provider>
   );
