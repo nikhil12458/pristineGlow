@@ -455,7 +455,7 @@ body {
 
   .burnCard {
     width: 30rem;
-    height: 12rem;
+    min-height: 12rem;
     border-radius: var(--radius-xl);
     border: 2px solid var(--accent-color);
     background-color: var(--burn-card-background-color);
@@ -798,6 +798,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 4rem;
+        flex-wrap: wrap;
         h3 {
           font-family: Montserrat;
           text-transform: capitalize;
@@ -863,6 +864,129 @@ body {
       border-radius: var(--radius-lg);
       color: var(--contact-form-button-color);
       cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .main {
+    nav.navbar {
+      display: none;
+    }
+
+    .homePage {
+      .homeBanner {
+        img {
+          min-height: 12rem;
+        }
+
+        &::after {
+          box-shadow: inset 12px 12px 10px var(--background-color),
+            inset -12px -12px 6px var(--background-color);
+        }
+
+        .bannerContent {
+          gap: var(--gutter-sm);
+          img {
+            width: 5rem;
+            object-fit: contain;
+          }
+
+          h4 {
+            font-size: 3rem;
+          }
+        }
+      }
+
+      .homeCards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-page {
+      header.contact-header {
+        margin: var(--mar-lg) auto;
+        h1::after {
+          right: 3%;
+          top: 11%;
+        }
+      }
+      section.contact-body {
+        width: 90%;
+        form {
+          gap: var(--gutter-md);
+          .form-top {
+            label {
+              span {
+                font-size: 1rem;
+              }
+              input {
+                width: 45vw;
+                padding: calc(var(--pad-sm) / 2);
+              }
+            }
+          }
+          label.form-center {
+            span {
+              font-size: 1rem;
+            }
+          }
+          label.form-bottom {
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    section.customCandle {
+      padding: 2rem;
+      .customHeading {
+        font-size: 2rem;
+      }
+      .options {
+        gap: 2rem;
+        .field {
+          width: 100%;
+          gap: 2rem;
+          h3 {
+            font-size: 2rem;
+          }
+          .customGrid {
+            flex-wrap: wrap;
+            gap: 1rem;
+          }
+        }
+      }
+    }
+
+    .productPage {
+      flex-direction: column;
+      gap: var(--gutter-sm);
+
+      .left {
+        width: 100%;
+        padding-inline: 1rem;
+        .crop {
+          img {
+            height: 25rem;
+          }
+        }
+        .propImage {
+          display: none;
+        }
+      }
+      .right {
+        width: 100%;
+        padding-block: 1rem;
+        padding-inline: 1rem;
+        gap: var(--gutter-sm);
+
+        h3 {
+          font-size: 2rem;
+        }
+      }
     }
   }
 }

@@ -405,7 +405,7 @@ body {
 }
 .main .burnCard {
   width: 30rem;
-  height: 12rem;
+  min-height: 12rem;
   border-radius: var(--radius-xl);
   border: 2px solid var(--accent-color);
   background-color: var(--burn-card-background-color);
@@ -723,6 +723,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  flex-wrap: wrap;
 }
 .main section.customCandle .options .field h3 {
   font-family: Montserrat;
@@ -780,4 +781,99 @@ body {
   border-radius: var(--radius-lg);
   color: var(--contact-form-button-color);
   cursor: pointer;
+}
+
+@media (max-width: 599px) {
+  .main nav.navbar {
+    display: none;
+  }
+  .main .homePage .homeBanner img {
+    min-height: 12rem;
+  }
+  .main .homePage .homeBanner::after {
+    box-shadow: inset 12px 12px 10px var(--background-color), inset -12px -12px 6px var(--background-color);
+  }
+  .main .homePage .homeBanner .bannerContent {
+    gap: var(--gutter-sm);
+  }
+  .main .homePage .homeBanner .bannerContent img {
+    width: 5rem;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .main .homePage .homeBanner .bannerContent h4 {
+    font-size: 3rem;
+  }
+  .main .homePage .homeCards {
+    grid-template-columns: 1fr;
+  }
+  .main .contact-page header.contact-header {
+    margin: var(--mar-lg) auto;
+  }
+  .main .contact-page header.contact-header h1::after {
+    right: 3%;
+    top: 11%;
+  }
+  .main .contact-page section.contact-body {
+    width: 90%;
+  }
+  .main .contact-page section.contact-body form {
+    gap: var(--gutter-md);
+  }
+  .main .contact-page section.contact-body form .form-top label span {
+    font-size: 1rem;
+  }
+  .main .contact-page section.contact-body form .form-top label input {
+    width: 45vw;
+    padding: calc(var(--pad-sm) / 2);
+  }
+  .main .contact-page section.contact-body form label.form-center span {
+    font-size: 1rem;
+  }
+  .main .contact-page section.contact-body form label.form-bottom span {
+    font-size: 1rem;
+  }
+  .main section.customCandle {
+    padding: 2rem;
+  }
+  .main section.customCandle .customHeading {
+    font-size: 2rem;
+  }
+  .main section.customCandle .options {
+    gap: 2rem;
+  }
+  .main section.customCandle .options .field {
+    width: 100%;
+    gap: 2rem;
+  }
+  .main section.customCandle .options .field h3 {
+    font-size: 2rem;
+  }
+  .main section.customCandle .options .field .customGrid {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .main .productPage {
+    flex-direction: column;
+    gap: var(--gutter-sm);
+  }
+  .main .productPage .left {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+  .main .productPage .left .crop img {
+    height: 25rem;
+  }
+  .main .productPage .left .propImage {
+    display: none;
+  }
+  .main .productPage .right {
+    width: 100%;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    gap: var(--gutter-sm);
+  }
+  .main .productPage .right h3 {
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=index.css.map */
