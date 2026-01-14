@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { CandleContext } from "../../context/CandleProvider";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 
 const HomeCard = () => {
   const { candleData } = useContext(CandleContext);
@@ -9,7 +10,26 @@ const HomeCard = () => {
     <div className="homeCards">
       {candleData.map((item) => {
         return (
-          <div key={item.id} className="homeCard">
+          <motion.div
+            initial={{
+              y: 100,
+              opacity: 0,
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+              
+            }}
+            key={item.id}
+            className="homeCard"
+          >
             <div className="imgContainer">
               <img src={item.mainImg} alt="" />
             </div>
@@ -21,7 +41,7 @@ const HomeCard = () => {
                 <h4 className="price">₹{item.price}</h4>
               </Link>
             </div>
-          </div>
+          </motion.div>
         );
       })}
     </div>

@@ -1,8 +1,21 @@
 import React from "react";
-
+import { motion } from "motion/react";
 const BurnCard = ({ item }) => {
   return (
-    <div className={`burnCard ${item.className}`}>
+    <motion.div
+      variants={{
+        hidden: { y: 100, opacity: 0 },
+        show: {
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 0.6,
+            ease: "easeOut",
+          },
+        },
+      }}
+      className={`burnCard ${item.className}`}
+    >
       <h2>{item.title}</h2>
       <div className="cardDescription">
         {item.description.split("<br>").map((line, index) => (
@@ -12,7 +25,7 @@ const BurnCard = ({ item }) => {
           </React.Fragment>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

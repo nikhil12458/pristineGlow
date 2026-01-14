@@ -5,7 +5,7 @@ const Button = ({ text, img, type, fnc }) => {
     <button
       className="button-component"
       type={type || "button"}
-      onClick={fnc || ""}
+      onClick={fnc || (() => {})}
     >
       {text}
       {img && <img src={img} alt="" />}

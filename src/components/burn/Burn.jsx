@@ -2,11 +2,14 @@ import { useContext, useEffect } from "react";
 import BurnCard from "../card/BurnCard";
 import { CandleContext } from "../../context/CandleProvider";
 import { Helmet } from "react-helmet-async";
+import { motion } from "motion/react";
 
 const Burn = () => {
   const { burnData } = useContext(CandleContext);
   useEffect(() => {
-    document.querySelector(".main").style.backgroundColor = `var(--background-color)`;
+    document.querySelector(
+      ".main"
+    ).style.backgroundColor = `var(--background-color)`;
   }, []);
   return (
     <div className="burnBody">
@@ -18,11 +21,24 @@ const Burn = () => {
         />
       </Helmet>
       <h1 className="glowHeading">✨ Glow – Candle Care Tips</h1>
-      <div className="glowCards">
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+        className="glowCards"
+      >
         {burnData.map((item, idx) => {
           return <BurnCard key={idx} item={item} />;
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };
