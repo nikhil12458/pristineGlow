@@ -14,7 +14,6 @@ const CustomCandle = () => {
   });
 
   const [number, setNumber] = useState("");
-  console.log(number);
 
   const handleSelect = (category, value) => {
     setFormData((prev) => ({
@@ -24,7 +23,12 @@ const CustomCandle = () => {
   };
 
   const handleBeforeSubmit = (e) => {
-    if (!Object.values(formData).every(Boolean)  || number === "") {
+    if (
+      !Object.values(formData).every(Boolean) ||
+      number === "" ||
+      number.length > 10 ||
+      number.length < 10
+    ) {
       e.preventDefault();
       alert("Please select all options");
     }
@@ -80,6 +84,11 @@ const CustomCandle = () => {
           name="access_key"
           value="4c70dbb3-1966-4e5e-8ae1-4af6a5f40051"
         ></input>
+        <input
+          type="hidden"
+          name="redirect"
+          value={`${window.location.origin}/custom-order`}
+        />
         <input type="hidden" name="size" value={formData.size} />
         <input type="hidden" name="type" value={formData.type} />
         <input type="hidden" name="fragrance" value={formData.fragrance} />

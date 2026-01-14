@@ -728,6 +728,7 @@ body {
   font-family: Montserrat;
   text-transform: capitalize;
   font-size: 2rem;
+  color: var(--text-color);
 }
 .main section.customCandle .options .field .customGrid {
   display: flex;
@@ -758,6 +759,7 @@ body {
   font-family: Montserrat;
   text-transform: capitalize;
   font-size: 2rem;
+  color: var(--text-color);
 }
 .main section.customCandle .details input {
   padding: 1rem 1rem;

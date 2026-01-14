@@ -4,7 +4,9 @@ import Button from "../button/Button";
 
 const Contact = () => {
   useEffect(() => {
-    document.querySelector(".main").style.backgroundColor = `var(--background-color)`;
+    document.querySelector(
+      ".main"
+    ).style.backgroundColor = `var(--background-color)`;
   }, []);
   return (
     <>
@@ -21,7 +23,17 @@ const Contact = () => {
           <div className="underline"></div>
         </header>
         <section className="contact-body">
-          <form action="">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="4c70dbb3-1966-4e5e-8ae1-4af6a5f40051"
+            ></input>
+            <input
+              type="hidden"
+              name="redirect"
+              value={`${window.location.origin}/`}
+            />
             <div className="form-top">
               <label>
                 <span>Name</span>
@@ -59,7 +71,7 @@ const Contact = () => {
                 required
               ></textarea>
             </label>
-            <Button text={"Request Callback"} />
+            <Button type={"submit"} text={"Request Callback"} />
           </form>
         </section>
       </div>

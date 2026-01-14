@@ -7,13 +7,59 @@ const ProductPage = () => {
   const { id } = useParams();
 
   const { candleData } = useContext(CandleContext);
-  const {name, backgroundColor, description, price, mainImg, fragrance, prop} = candleData[id - 1];
+
+  const [customData, setCustomData] = useState({
+    title: "",
+    price: "",
+    fragrance: "",
+    link: "",
+    description: "",
+  });
+
+  const {
+    name,
+    backgroundColor,
+    description,
+    price,
+    mainImg,
+    fragrance,
+    prop,
+  } = candleData[id - 1];
 
   const [num, setNum] = useState(1);
 
   useEffect(() => {
-    document.querySelector(".main").style.backgroundColor = `${backgroundColor}`;
+    document.querySelector(
+      ".main"
+    ).style.backgroundColor = `${backgroundColor}`;
+
+    setCustomData({
+      title: name,
+      price: price,
+      fragrance: "fragrance",
+      link: window.location.href,
+      description: description,
+    });
   }, []);
+
+  const sendToWhatsapp = () => {
+    const whatsappNumber = "9350355627";
+
+    const text = `
+    Candle order 🕯️
+
+    title: ${customData.title}
+    price: ${customData.price}
+    quantity: ${num}
+    fragrance: ${customData.fragrance}
+    link: ${customData.link}
+    `;
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      text
+    )}`;
+    window.open(url, "_blank");
+  };
 
   return (
     <section className="productPage">
@@ -27,7 +73,7 @@ const ProductPage = () => {
       </div>
       <div className="right">
         <h3>{name}</h3>
-        <p>Rs. {(price).toFixed(2)}</p>
+        <p>Rs. {price.toFixed(2)}</p>
         <div className="quantity">
           <h3>Quantity</h3>
           <div className="selector">
@@ -54,13 +100,16 @@ const ProductPage = () => {
           <h2>Fragrance</h2>
           <p>{fragrance}</p>
         </div>
-        <Button text={"BUY NOW"} img={"/logo/WhatsApp.png"} />
+        <Button
+          fnc={sendToWhatsapp}
+          type={"button"}
+          text={"BUY NOW"}
+          img={"/logo/WhatsApp.png"}
+        />
         <div className="line"></div>
         <div className="details">
           <h2>Details</h2>
-          <p>
-           {description}
-          </p>
+          <p>{description}</p>
         </div>
       </div>
     </section>
