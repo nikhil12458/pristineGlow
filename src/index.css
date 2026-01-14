@@ -545,6 +545,7 @@ body {
   font-weight: 500;
   font-size: 1.2rem;
   color: var(--text-color);
+  min-height: 5rem;
 }
 .main .homePage .homeCards .homeCard .productTitle a {
   color: var(--text-color);
