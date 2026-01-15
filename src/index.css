@@ -194,6 +194,14 @@ body {
   width: 100%;
 }
 
+body {
+  background-color: var(--background-color-light-linen);
+}
+
+.main {
+  max-width: 2000px;
+}
+
 .main {
   width: 100%;
   min-height: 100dvh;
@@ -202,6 +210,7 @@ body {
   display: flex;
   flex-direction: column;
   transition: background-color 0.3s linear;
+  margin: 0 auto;
 }
 .main nav.navbar {
   width: 80%;
