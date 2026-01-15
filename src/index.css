@@ -784,8 +784,14 @@ body {
 }
 
 @media (max-width: 599px) {
+  .main {
+    margin-top: 3rem;
+  }
   .main nav.navbar {
     width: 100%;
+    position: fixed;
+    top: 0;
+    margin-block: 1rem;
   }
   .main .homePage .homeBanner img {
     min-height: 12rem;

@@ -870,8 +870,12 @@ body {
 
 @media (max-width: 599px) {
   .main {
+    margin-top: 3rem;
     nav.navbar {
       width: 100%;
+      position: fixed;
+      top: 0;
+      margin-block: 1rem;
     }
 
     .homePage {
