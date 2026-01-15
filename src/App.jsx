@@ -5,6 +5,7 @@ import Burn from "./components/burn/Burn";
 import Contact from "./components/ContactPage/Contact";
 import ProductPage from "./components/productPage/ProductPage";
 import CustomCandle from "./components/customCandle/CustomCandle";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
@@ -18,6 +19,8 @@ const App = () => {
         <Route path="/custom-order" element={<CustomCandle />} />
         <Route path="/glow" element={<Burn />} />
       </Routes>
+
+      <Analytics />
     </div>
   );
 };
