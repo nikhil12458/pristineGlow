@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { CandleContext } from "../../context/CandleProvider";
+import { Helmet } from "react-helmet-async";
 
 const CustomCandle = () => {
   const fields = ["type", "size", "fragrance", "packaging"];
