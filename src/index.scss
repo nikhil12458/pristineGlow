@@ -237,12 +237,12 @@ body {
   color: var(--contact-form-button-color);
 }
 
-body{
+body {
   background-color: var(--background-color-light-linen);
 }
 
-.main{
-  max-width: 2000px;
+.main {
+  max-width: 1600px;
 }
 
 .main {
@@ -274,7 +274,8 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.4);
 
     /* Depth */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08),
+    box-shadow:
+      0 8px 30px rgba(0, 0, 0, 0.08),
       inset 0 1px 0 rgba(255, 255, 255, 0.4);
 
     img {
@@ -455,7 +456,9 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.4);
 
     /* Depth */
-    box-shadow: 0 8px 30px #e8d9b8, inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    box-shadow:
+      0 8px 30px #e8d9b8,
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
     cursor: pointer;
   }
   .button-component:active {
@@ -478,7 +481,8 @@ body{
     -webkit-backdrop-filter: blur(22px) saturate(170%);
 
     /* Inner light */
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25),
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.25),
       inset 0 10px 20px rgba(255, 255, 255, 0.15),
       /* Outer glow */ 0 5px 15px rgba(0, 0, 0, 0.185),
       0 0 20px rgba(120, 255, 200, 0.25);
@@ -548,7 +552,8 @@ body{
         content: "";
         position: absolute;
         inset: 0;
-        box-shadow: inset 12px 12px 20px var(--background-color),
+        box-shadow:
+          inset 12px 12px 20px var(--background-color),
           inset -12px -12px 12px var(--background-color);
         pointer-events: none;
       }
@@ -565,7 +570,7 @@ body{
         height: 100%;
         z-index: 1;
         img {
-          width: 9rem;
+          width: 6rem;
         }
 
         h4 {
@@ -573,7 +578,7 @@ body{
           font-family: Pacifico;
           font-weight: 400;
           font-style: normal;
-          font-size: 5rem;
+          font-size: 4rem;
           line-height: 1;
           color: var(--text-color);
 
@@ -890,29 +895,52 @@ body{
     .homePage {
       .homeBanner {
         img {
-          min-height: 12rem;
+          min-height: 10rem;
         }
 
         &::after {
-          box-shadow: inset 12px 12px 10px var(--background-color),
+          box-shadow:
+            inset 12px 12px 10px var(--background-color),
             inset -12px -12px 6px var(--background-color);
         }
 
         .bannerContent {
           gap: var(--gutter-sm);
           img {
-            width: 5rem;
+            width: 3rem;
             object-fit: contain;
           }
 
           h4 {
-            font-size: 3rem;
+            font-size: 2rem;
           }
         }
       }
 
       .homeCards {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gutter-sm);
+
+        .homeCard {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0.4rem;
+
+          .imgContainer {
+            width: 10.5rem;
+          }
+
+          .productTitle {
+            font-size: .8rem;
+            min-height: 3rem;
+            .price {
+              font-size: .8rem;
+            }
+          }
+        }
       }
     }
 
