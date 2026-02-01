@@ -3,12 +3,14 @@ import { CandleContext } from "../../context/CandleProvider";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 
-const HomeCard = () => {
+const HomeCard = ({cat}) => {
   const { candleData } = useContext(CandleContext);
+
+  const filteredData = candleData.filter(elem => !cat || elem.category === cat )
 
   return (
     <div className="homeCards">
-      {candleData.map((item) => {
+      {filteredData.map((item) => {
         return (
           <motion.div
             initial={{

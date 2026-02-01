@@ -10,7 +10,7 @@ const candleData = [
     name: "Ocean Breeze",
     description:
       "A refreshing ocean-themed candle inspired by sea waves and coastal air.",
-    category: "Fresh",
+    category: "new-year",
     fragrance: "Ocean, Sea Salt",
     price: 799,
     stock: 12,
@@ -29,7 +29,7 @@ const candleData = [
     name: "Bubble Cube Candle",
     description:
       "Modern bubble cube candle for aesthetic and minimal interiors.",
-    category: "Decorative",
+    category: "holi",
     fragrance: "Mild Vanilla",
     price: 699,
     stock: 15,
@@ -48,7 +48,7 @@ const candleData = [
     name: "Mini Bubble Cube Candle",
     description:
       "Compact bubble cube candle ideal for shelves and side tables.",
-    category: "Decorative",
+    category: "holi",
     fragrance: "Mild Vanilla",
     price: 549,
     stock: 18,
