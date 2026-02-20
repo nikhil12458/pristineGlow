@@ -255,69 +255,97 @@ body {
   transition: background-color 0.3s linear;
   margin: 0 auto;
 
-  nav.navbar {
-    width: 80%;
-    margin: 0 auto;
-    @include flex(space-between, row);
-    padding: var(--pad-sm) var(--pad-md);
-    border-radius: var(--pad-lg);
-    background-color: var(--nav-background-color);
-    position: relative;
-    overflow: hidden;
+  .logoSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
     margin-top: var(--mar-md);
 
-    /* Glass base */
-    backdrop-filter: blur(14px) saturate(170%);
-    -webkit-backdrop-filter: blur(14px) saturate(170%);
+    .nav-side-logo {
+      width: 3rem;
+      height: 3rem;
+      backdrop-filter: blur(14px) saturate(170%);
+      -webkit-backdrop-filter: blur(14px) saturate(170%);
 
-    /* Glass edge */
-    border: 1px solid rgba(255, 255, 255, 0.4);
+      /* Glass edge */
+      border: 1px solid rgba(255, 255, 255, 0.4);
 
-    /* Depth */
-    box-shadow:
-      0 8px 30px rgba(0, 0, 0, 0.08),
-      inset 0 1px 0 rgba(255, 255, 255, 0.4);
-
-    img {
-      width: 10vw;
-      position: absolute;
-      left: -3%;
-      bottom: -123%;
-      pointer-events: none;
-      display: none;
+      /* Depth */
+      box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      cursor: pointer;
+      padding: .1rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
-    .nav-items {
-      font-family: Montserrat;
-      font-weight: 600;
-      font-style: normal;
-      color: var(--text-color);
-      text-decoration: none;
-    }
+    nav.navbar {
+      width: 80%;
+      @include flex(space-between, row);
+      padding: var(--pad-sm) var(--pad-md);
+      border-radius: var(--pad-lg);
+      background-color: var(--nav-background-color);
+      position: relative;
+      overflow: hidden;
 
-    .nav-items:nth-child(1)::after {
-      content: "";
-      position: absolute;
-      width: 6rem;
-      height: 6rem;
-      background: url("/prop/prop1.png") no-repeat;
-      background-size: cover;
-      background-position: center;
-      top: -22%;
-      left: -1%;
-    }
+      /* Glass base */
+      backdrop-filter: blur(14px) saturate(170%);
+      -webkit-backdrop-filter: blur(14px) saturate(170%);
 
-    .nav-items:nth-last-child(1)::after {
-      content: "";
-      position: absolute;
-      width: 6rem;
-      height: 6rem;
-      background: url("/prop/prop2.png") no-repeat;
-      background-size: cover;
-      background-position: center;
-      top: -109%;
-      right: -3%;
-      rotate: 14deg;
+      /* Glass edge */
+      border: 1px solid rgba(255, 255, 255, 0.4);
+
+      /* Depth */
+      box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+      img {
+        width: 10vw;
+        position: absolute;
+        left: -3%;
+        bottom: -123%;
+        pointer-events: none;
+        display: none;
+      }
+
+      .nav-items {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: normal;
+        color: var(--text-color);
+        text-decoration: none;
+      }
+
+      .nav-items:nth-child(1)::after {
+        content: "";
+        position: absolute;
+        width: 6rem;
+        height: 6rem;
+        background: url("/prop/prop1.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+        top: -22%;
+        left: -1%;
+      }
+
+      .nav-items:nth-last-child(1)::after {
+        content: "";
+        position: absolute;
+        width: 6rem;
+        height: 6rem;
+        background: url("/prop/prop2.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+        top: -109%;
+        right: -3%;
+        rotate: 14deg;
+      }
     }
   }
 
@@ -603,16 +631,16 @@ body {
       justify-content: flex-end;
       padding-inline: 1rem;
 
-      #catTag{
+      #catTag {
         outline: none;
         border: 2px solid var(--accent-color);
         background-color: var(--background-color);
         font-family: Montserrat;
         font-weight: 700;
         font-size: 1.2rem;
-        border-radius: .4rem;
-        
-        option{
+        border-radius: 0.4rem;
+
+        option {
           background-color: var(--background-color);
           font-family: Montserrat;
           font-weight: 400;
