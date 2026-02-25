@@ -842,13 +842,24 @@ body {
 
 @media (max-width: 599px) {
   .main {
-    margin-top: 3rem;
+    margin-top: 0rem;
   }
   .main nav.navbar {
     width: 100%;
     position: fixed;
     top: 0;
     margin-block: 1rem;
+  }
+  .main nav.navbar .nav-items {
+    font-size: 0.8rem;
+  }
+  .main nav.navbar .nav-items:nth-child(1)::after {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+  .main nav.navbar .nav-items:nth-last-child(1)::after {
+    width: 5rem !important;
+    height: 5rem !important;
   }
   .main .homePage .homeBanner img {
     min-height: 10rem;
