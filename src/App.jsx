@@ -1,23 +1,27 @@
-import Nav from "./components/navbar/Nav";
+import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/home/Home";
-import Burn from "./components/burn/Burn";
-import Contact from "./components/ContactPage/Contact";
-import ProductPage from "./components/productPage/ProductPage";
-import CustomCandle from "./components/customCandle/CustomCandle";
+import Nav from "./components/navbar/Nav";
 import { Analytics } from "@vercel/analytics/react";
+
+const Home = lazy(() => import("./components/home/Home"));
+const Burn = lazy(() => import("./components/burn/Burn"));
+const Contact = lazy(() => import("./components/ContactPage/Contact"));
+const ProductPage = lazy(() => import("./components/productPage/ProductPage"));
+const CustomCandle = lazy(() => import("./components/customCandle/CustomCandle"));
 
 const App = () => {
   return (
     <div className="main">
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/:slug/:id" element={<ProductPage />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/custom-order" element={<CustomCandle />} />
-        <Route path="/glow" element={<Burn />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/:slug/:id" element={<ProductPage />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/custom-order" element={<CustomCandle />} />
+          <Route path="/glow" element={<Burn />} />
+        </Routes>
+      </Suspense>
       <Analytics />
     </div>
   );
