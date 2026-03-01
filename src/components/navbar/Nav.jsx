@@ -3,12 +3,17 @@ import { Link } from "react-router-dom";
 import { easeIn, motion } from "motion/react";
 
 const Nav = () => {
-  const navElem = ["Home", "Contact", "Custom-Order", "Glow"];
+  const navElem = [
+    { label: "Home", path: "/" },
+    { label: "Contact", path: "/contact" },
+    { label: "Custom Order", path: "/custom-order" },
+    { label: "Glow", path: "/glow" },
+  ];
 
   return (
     <div className="logoSection">
-      <Link to={"/"} className="nav-side-logo">
-        <img src="/logo/mainLogo.svg" alt="" />
+      <Link to="/" className="nav-side-logo" aria-label="Pristine Glow home">
+        <img src="/logo/mainLogo.svg" alt="Pristine Glow" loading="eager" />
       </Link>
       <motion.nav
         initial={{
@@ -24,15 +29,12 @@ const Nav = () => {
           ease: easeIn,
         }}
         className="navbar"
+        aria-label="Primary"
       >
-        {navElem.map((item, idx) => {
+        {navElem.map((item) => {
           return (
-            <Link
-              className="nav-items"
-              key={idx}
-              to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-            >
-              {item}
+            <Link className="nav-items" key={item.path} to={item.path}>
+              {item.label}
             </Link>
           );
         })}
