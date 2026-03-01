@@ -3,14 +3,14 @@ import { CandleContext } from "../../context/CandleProvider";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 
-const HomeCard = ({ cat }) => {
+const HomeCard = ({cat}) => {
   const { candleData } = useContext(CandleContext);
 
-  const filteredData = candleData.filter((elem) => !cat || elem.category === cat);
+  const filteredData = candleData.filter(elem => !cat || elem.category === cat )
 
   return (
     <div className="homeCards">
-      {filteredData.map((item, idx) => {
+      {filteredData.map((item) => {
         return (
           <motion.div
             initial={{
@@ -23,23 +23,18 @@ const HomeCard = ({ cat }) => {
             }}
             viewport={{
               once: true,
-              amount: 0.2,
+              amount: 0.2
             }}
             transition={{
               duration: 0.6,
               ease: "easeOut",
+              
             }}
             key={item.id}
             className="homeCard"
           >
             <div className="imgContainer">
-              <img
-                src={item.mainImg}
-                alt={`${item.name} candle`}
-                loading={idx < 6 ? "eager" : "lazy"}
-                decoding="async"
-                fetchPriority={idx < 2 ? "high" : "auto"}
-              />
+              <img src={item.mainImg} alt="" />
             </div>
             <div className="productTitle">
               <Link to={`/${item.slug}/${item.id}`}>
